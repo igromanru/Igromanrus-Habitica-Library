@@ -6,8 +6,8 @@
 const AUTHOR_ID = "06b046d4-160a-4a20-b527-b74385052f0e";
 
 const Headers = {
-  "x-api-user": ScriptProperties.getProperty('API_ID'),
-  "x-api-key": ScriptProperties.getProperty('API_KEY'),
+  "x-api-user": "",
+  "x-api-key": "",
   "x-client": AUTHOR_ID + '-' + DriveApp.getFileById(ScriptApp.getScriptId()).getName()
 };
 
@@ -30,6 +30,11 @@ function setApiAuthorization(userId, apiToken) {
   
   Headers["x-api-user"] = userId;
   Headers["x-api-key"] = apiToken;
+}
+
+function isAuthorizationHeaderSet() {
+  return Headers["x-api-user"] && typeof Headers["x-api-user"] === "string"
+          && Headers["x-api-user"] && typeof Headers["x-api-key"] === "string";
 }
 
 function getRequestHeaders() {
@@ -149,7 +154,7 @@ function sendPrivateMessage(targetUserId, messageText) {
  * sendPM, but uses the Id of the API user as target
  */
 function sendPrivateMessageToSelf(messageText) {
-  return sendPrivateMessage(UserId, messageText);
+  return sendPrivateMessage(Headers["x-api-user"], messageText);
 }
 
 function sendMessageToParty(messageText) {
@@ -223,7 +228,6 @@ function toggleSleep() {
   const result = fetchPost(`${UserAPI}/sleep`);
   if (result !== undefined && result && typeof result.data === 'boolean') {
     isSleeping = result.data;
-    setSentToSleepByScript(isSleeping);
   }
 
   return isSleeping;
@@ -236,14 +240,12 @@ function toggleSleep() {
  */
 function buyEnchantedArmoire() {
   console.log('Buying Enchanted Armoire');
-
   const result = fetchPost(`${UserAPI}/buy-armoire`);
   if (result !== undefined && result) {
     console.log(`Armoire json: ${JSON.stringify(result.data.armoire)}`);
     console.log(`Message: ${result.message}`);
     return result;
   }
-
   return undefined;
 }
 
@@ -497,6 +499,15 @@ function fetchDelete(url) {
 }
 
 function fetch(url, method = 'GET', params = {}) {
+  if (!url) {
+    console.error(`fetch error: Invalid 'url' parameter value: "${url}"`);
+    return undefined;
+  }
+  if (!isAuthorizationHeaderSet()) {
+    console.error(`fetch error: API Authorization wasn't set!\nPlease call the ${setApiAuthorization.name} function with valid User ID and API Token at the beginning of the script!`);
+    return undefined;
+  }
+
   params = Object.assign({
     'method': method,
     'headers': Headers,
