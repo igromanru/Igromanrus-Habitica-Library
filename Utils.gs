@@ -1,0 +1,1 @@
+const ScriptProperties = PropertiesService.getScriptProperties();
