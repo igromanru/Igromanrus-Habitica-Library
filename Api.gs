@@ -544,7 +544,8 @@ function fetch(url, method = 'GET', params = {}) {
       }
     }
 
-    console.error(`Request: ${url}\nResponse code: ${responseCode}\nContent: ${contentText}`);
+    throw new Error(`Request: ${url}\nResponse code: ${responseCode}\nContent: ${contentText}`);
+    // console.error(`Request: ${url}\nResponse code: ${responseCode}\nContent: ${contentText}`);
     return undefined;
   }
 
