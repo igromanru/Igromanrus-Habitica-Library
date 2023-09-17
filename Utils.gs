@@ -7,14 +7,16 @@
  * 
  */
 function padLeft(input, targetLength, padString = "&nbsp;") {
+  let result = '';
   if (input !== undefined && targetLength > 0) {
     input = input.toString();
     const padCount = targetLength - input.length;
-    if (padCount >= 0) {
-      return padString.repeat(padCount) + input;
+    if (padCount > 0) {
+      result = padString.repeat(padCount);
     }
+    result += input;
   }
-  return '';
+  return result;
 }
 
 /**
