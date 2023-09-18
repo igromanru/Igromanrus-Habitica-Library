@@ -86,7 +86,7 @@ function getGroupMembers(groupId, includeAllPublicFields = false, includeTasks =
   if (groupId) {
     const lastIdParam = lastId ? `&lastId=${lastId}` : '';
     const result = fetchGet(`${GroupsAPI}/${groupId}/members?includeTasks=${includeTasks}&includeAllPublicFields=${includeAllPublicFields}&limit=${limit}${lastIdParam}`);
-    if (result !== undefined && result && result.data instanceof Array) {
+    if (result !== undefined && result && Array.isArray(result.data)) {
       return result.data;
     }
   }
@@ -122,7 +122,7 @@ function getPartyChat() {
 function getGroupChat(groupId) {
   if (groupId) {
     const result = fetchGet(`${GroupsAPI}/${groupId}/chat`);
-    if (result !== undefined && result && result.data instanceof Array) {
+    if (result !== undefined && result && Array.isArray(result.data)) {
       return result.data;
     }
   }
@@ -185,16 +185,15 @@ function sendMessageToGroup(targetGroupId, messageText) {
 /**
  * Sends the request to buy a Health Postion
  * 
- * Returns false if failed, otherwise true
- * https://habitica.com/apidoc/#api-User-UserBuyPotion
+ * Returns reponse object, undefined on error
+ * See: https://habitica.com/apidoc/#api-User-UserBuyPotion
  */
 function buyHealthPotion() {
   const result = fetchPost(`${UserAPI}/buy-health-potion`);
-  if (result !== undefined && result) {
-    return result.success === true;
+  if (result !== undefined && result && result.success === true) {
+    return result;
   }
-
-  return false;
+  return undefined;
 }
 
 /**
@@ -365,14 +364,14 @@ function getUserTasks(type = '', dueDate = undefined) {
     type = type ? `&type=${type}` : '';
     dueDate = dueDate ? `&dueDate=${dueDate.toISOString()}` : '';
     const result = fetchGet(`${TasksAPI}/user?${type}${dueDate}`);
-    if (result !== undefined && result && result.data instanceof Array) {
+    if (result !== undefined && result && Array.isArray(result.data)) {
       return result.data;
     }
   } else {
     console.error(`${arguments.callee.name}: Invalid type: ${type}`);
   }
 
-  return []
+  return [];
 }
 
 /**
@@ -421,7 +420,7 @@ function castSkill(spellId, targetId = '') {
  */
 function getWebHooks() {
   const result = fetchGet(`${UserAPI}/webhook`);
-  if (result !== undefined && result && result.data instanceof Array) {
+  if (result !== undefined && result && Array.isArray(result.data)) {
     return result.data;
   }
   
@@ -471,7 +470,7 @@ function createWebHook(targetUrl, label, type = 'taskActivity', options = undefi
 function deleteWebHook(webhookId) {
   if (webhookId && typeof webhookId === 'string') {
     const result = fetchDelete(`${UserAPI}/webhook/${webhookId}`);
-    if (result !== undefined && result && result.data instanceof Array) {
+    if (result !== undefined && result && Array.isArray(result.data)) {
       return result.data;
     }
   }

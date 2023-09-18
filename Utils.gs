@@ -3,6 +3,8 @@
  * Source: https://github.com/igromanru/Igromanrus-Habitica-Library
  */
 
+const ScriptProperties = PropertiesService.getScriptProperties();
+
 /**
  * 
  */
