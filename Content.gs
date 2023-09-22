@@ -29,7 +29,11 @@ function getQuestContentByKey(questKey) {
   
   function getGearContentByKey(gearKey) {
 	if (typeof gearKey === "string" && gearKey) {
-	  return HabiticaGearContent[gearKey];
+	  try {
+		return HabiticaFlatGearContent[gearKey];
+	  } catch (error) {
+		console.error(error);
+	  }
 	} else {
 	  console.error(`getGearContentByKey error: Invalid parameter gearKey: "${gearKey}"`);
 	}
@@ -4505,7 +4509,7 @@ function getQuestContentByKey(questKey) {
   };
   
   // The "gear.flat" part of the habitica content
-  const HabiticaGearContent = {
+  const HabiticaFlatGearContent = {
 	"weapon_warrior_0": {
 	  "text": "Training Sword",
 	  "notes": "Practice weapon. Confers no benefit. ",
@@ -8558,6 +8562,98 @@ function getQuestContentByKey(questKey) {
 	  "per": 0,
 	  "con": 0
 	},
+	"weapon_special_fall2023Rogue": {
+	  "set": "fall2023WitchsBrewRogueSet",
+	  "event": {
+		"start": "2023-09-21T08:00-04:00",
+		"end": "2023-10-31T23:59-04:00",
+		"npcImageSuffix": "_fall",
+		"season": "fall",
+		"gear": true
+	  },
+	  "specialClass": "rogue",
+	  "text": "Soupernatural Spoon",
+	  "notes": "It takes an exceptionally strong stirrer to cook up bubbles and toiling troubles. Increases Strength by 8. Limited Edition 2023 Fall Gear. ",
+	  "value": 80,
+	  "twoHanded": false,
+	  "str": 8,
+	  "type": "weapon",
+	  "key": "weapon_special_fall2023Rogue",
+	  "klass": "special",
+	  "index": "fall2023Rogue",
+	  "int": 0,
+	  "per": 0,
+	  "con": 0
+	},
+	"weapon_special_fall2023Healer": {
+	  "set": "fall2023BogCreatureHealerSet",
+	  "event": {
+		"start": "2023-09-21T08:00-04:00",
+		"end": "2023-10-31T23:59-04:00",
+		"npcImageSuffix": "_fall",
+		"season": "fall",
+		"gear": true
+	  },
+	  "specialClass": "healer",
+	  "text": "Log Great Hammer",
+	  "notes": "With slow, heavy attacks, this gnarled hammer deals out healing blows instead of damage. Increases Intelligence by 9. Limited Edition 2023 Fall Gear. ",
+	  "value": 90,
+	  "twoHanded": false,
+	  "int": 9,
+	  "type": "weapon",
+	  "key": "weapon_special_fall2023Healer",
+	  "klass": "special",
+	  "index": "fall2023Healer",
+	  "str": 0,
+	  "per": 0,
+	  "con": 0
+	},
+	"weapon_special_fall2023Warrior": {
+	  "set": "fall2023ScaryMovieWarriorSet",
+	  "event": {
+		"start": "2023-09-21T08:00-04:00",
+		"end": "2023-10-31T23:59-04:00",
+		"npcImageSuffix": "_fall",
+		"season": "fall",
+		"gear": true
+	  },
+	  "specialClass": "warrior",
+	  "text": "Tasty Popcorn",
+	  "notes": "The most terrifying thing of all is the thought of a scary movie night with no snacks! Increases Strength by 15. Limited Edition 2023 Fall Gear. ",
+	  "value": 90,
+	  "twoHanded": false,
+	  "str": 15,
+	  "type": "weapon",
+	  "key": "weapon_special_fall2023Warrior",
+	  "klass": "special",
+	  "index": "fall2023Warrior",
+	  "int": 0,
+	  "per": 0,
+	  "con": 0
+	},
+	"weapon_special_fall2023Mage": {
+	  "set": "fall2023ScarletWarlockMageSet",
+	  "event": {
+		"start": "2023-09-21T08:00-04:00",
+		"end": "2023-10-31T23:59-04:00",
+		"npcImageSuffix": "_fall",
+		"season": "fall",
+		"gear": true
+	  },
+	  "specialClass": "wizard",
+	  "text": "Shining Staff",
+	  "notes": "With a crystal at its core, this shining staff makes magic emerge from the mundane. Increases Intelligence by 15. Limited Edition 2023 Fall Gear. Two-handed item.",
+	  "value": 160,
+	  "twoHanded": true,
+	  "int": 15,
+	  "per": 7,
+	  "type": "weapon",
+	  "key": "weapon_special_fall2023Mage",
+	  "klass": "special",
+	  "index": "fall2023Mage",
+	  "str": 0,
+	  "con": 0
+	},
 	"weapon_mystery_201411": {
 	  "text": "Pitchfork of Feasting",
 	  "notes": "Stab your enemies or dig in to your favorite foods - this versatile pitchfork does it all! Confers no benefit. November 2014 Subscriber Item. ",
@@ -10125,6 +10221,34 @@ function getQuestContentByKey(questKey) {
 	  "str": 0,
 	  "per": 0,
 	  "con": 0
+	},
+	"weapon_armoire_mop": {
+	  "con": 4,
+	  "per": 4,
+	  "set": "cleaningSuppliesTwo",
+	  "notes": "Step 1: Dunk the mop in a bucket of water and suds. Step 2: Drag the mop along the floor. Step 3: Pretend the end of the mop handle is a microphone and sing your heart out. Step 4: Repeat Steps 1-3 until floor is clean. Increases Constitution and Perception by 4 each. Enchanted Armoire: Cleaning Supplies Set Two (Item 2 of 3) ",
+	  "text": "Mop",
+	  "value": 100,
+	  "type": "weapon",
+	  "key": "weapon_armoire_mop",
+	  "klass": "armoire",
+	  "index": "mop",
+	  "str": 0,
+	  "int": 0
+	},
+	"weapon_armoire_cleaningCloth": {
+	  "str": 4,
+	  "con": 4,
+	  "set": "cleaningSuppliesTwo",
+	  "notes": "Take this tidying tool on your adventures and always be able to polish a pretty plaque or wipe a wooden windowsill. Increases Strength and Constitution by 4 each. Enchanted Armoire: Cleaning Supplies Set Two (Item 3 of 3) ",
+	  "text": "Cleaning Cloth",
+	  "value": 100,
+	  "type": "weapon",
+	  "key": "weapon_armoire_cleaningCloth",
+	  "klass": "armoire",
+	  "index": "cleaningCloth",
+	  "int": 0,
+	  "per": 0
 	},
 	"armor_warrior_1": {
 	  "text": "Leather Armor",
@@ -14077,6 +14201,94 @@ function getQuestContentByKey(questKey) {
 	  "str": 0,
 	  "int": 0,
 	  "per": 0
+	},
+	"armor_special_fall2023Warrior": {
+	  "set": "fall2023ScaryMovieWarriorSet",
+	  "event": {
+		"start": "2023-09-21T08:00-04:00",
+		"end": "2023-10-31T23:59-04:00",
+		"npcImageSuffix": "_fall",
+		"season": "fall",
+		"gear": true
+	  },
+	  "specialClass": "warrior",
+	  "text": "Video Player Armor",
+	  "notes": "Does it play DVDs? VHS?? What kind of cables does this need to plug into the TV?! Turns out this is the scariest part of the whole thing! Increases Constitution by 9. Limited Edition 2023 Summer Gear.",
+	  "value": 90,
+	  "con": 9,
+	  "type": "armor",
+	  "key": "armor_special_fall2023Warrior",
+	  "klass": "special",
+	  "index": "fall2023Warrior",
+	  "str": 0,
+	  "int": 0,
+	  "per": 0
+	},
+	"armor_special_fall2023Healer": {
+	  "set": "fall2023BogCreatureHealerSet",
+	  "event": {
+		"start": "2023-09-21T08:00-04:00",
+		"end": "2023-10-31T23:59-04:00",
+		"npcImageSuffix": "_fall",
+		"season": "fall",
+		"gear": true
+	  },
+	  "specialClass": "healer",
+	  "text": "Bog Creature Body",
+	  "notes": "With moss, rock, wood, and bog water merged into one, this outfit is sometimes tough and sometimes spongey (but always intimidating). Increases Constitution by 15. Limited Edition 2023 Fall Gear.",
+	  "value": 90,
+	  "con": 15,
+	  "type": "armor",
+	  "key": "armor_special_fall2023Healer",
+	  "klass": "special",
+	  "index": "fall2023Healer",
+	  "str": 0,
+	  "int": 0,
+	  "per": 0
+	},
+	"armor_special_fall2023Mage": {
+	  "set": "fall2023ScarletWarlockMageSet",
+	  "event": {
+		"start": "2023-09-21T08:00-04:00",
+		"end": "2023-10-31T23:59-04:00",
+		"npcImageSuffix": "_fall",
+		"season": "fall",
+		"gear": true
+	  },
+	  "specialClass": "wizard",
+	  "text": "Scarlet Warlock Robe",
+	  "notes": "With scarlet threads and gold accents, this outfit is a wonder for the senses. Increases Intelligence by 9. Limited Edition 2023 Fall Gear.",
+	  "value": 90,
+	  "int": 9,
+	  "type": "armor",
+	  "key": "armor_special_fall2023Mage",
+	  "klass": "special",
+	  "index": "fall2023Mage",
+	  "str": 0,
+	  "per": 0,
+	  "con": 0
+	},
+	"armor_special_fall2023Rogue": {
+	  "set": "fall2023WitchsBrewRogueSet",
+	  "event": {
+		"start": "2023-09-21T08:00-04:00",
+		"end": "2023-10-31T23:59-04:00",
+		"npcImageSuffix": "_fall",
+		"season": "fall",
+		"gear": true
+	  },
+	  "specialClass": "rogue",
+	  "text": "Cursed Cauldron",
+	  "notes": "You were lured with the promise of a nice hot soak... Joke's on you! Increases Perception by 15. Limited Edition 2023 Fall Gear.",
+	  "value": 90,
+	  "per": 15,
+	  "type": "armor",
+	  "key": "armor_special_fall2023Rogue",
+	  "klass": "special",
+	  "index": "fall2023Rogue",
+	  "str": 0,
+	  "int": 0,
+	  "con": 0
 	},
 	"armor_mystery_201402": {
 	  "text": "Messenger Robes",
@@ -20315,6 +20527,94 @@ function getQuestContentByKey(questKey) {
 	  "per": 0,
 	  "con": 0
 	},
+	"head_special_fall2023Healer": {
+	  "set": "fall2023BogCreatureHealerSet",
+	  "event": {
+		"start": "2023-09-21T08:00-04:00",
+		"end": "2023-10-31T23:59-04:00",
+		"npcImageSuffix": "_fall",
+		"season": "fall",
+		"gear": true
+	  },
+	  "specialClass": "healer",
+	  "text": "Bog Creature Mask",
+	  "notes": "With eyes as dark as the bog it emerged from, it fixes its gaze upon enemies. Increases Intelligence by 7. Limited Edition 2023 Fall Gear.",
+	  "value": 60,
+	  "int": 7,
+	  "type": "head",
+	  "key": "head_special_fall2023Healer",
+	  "klass": "special",
+	  "index": "fall2023Healer",
+	  "str": 0,
+	  "per": 0,
+	  "con": 0
+	},
+	"head_special_fall2023Mage": {
+	  "set": "fall2023ScarletWarlockMageSet",
+	  "event": {
+		"start": "2023-09-21T08:00-04:00",
+		"end": "2023-10-31T23:59-04:00",
+		"npcImageSuffix": "_fall",
+		"season": "fall",
+		"gear": true
+	  },
+	  "specialClass": "wizard",
+	  "text": "Scarlet Warlock Mask",
+	  "notes": "With piercing eyes and pointed flair, it makes any illusion a sudden possibility. Increases Perception by 7. Limited Edition 2023 Fall Gear.",
+	  "value": 60,
+	  "per": 7,
+	  "type": "head",
+	  "key": "head_special_fall2023Mage",
+	  "klass": "special",
+	  "index": "fall2023Mage",
+	  "str": 0,
+	  "int": 0,
+	  "con": 0
+	},
+	"head_special_fall2023Rogue": {
+	  "set": "fall2023WitchsBrewRogueSet",
+	  "event": {
+		"start": "2023-09-21T08:00-04:00",
+		"end": "2023-10-31T23:59-04:00",
+		"npcImageSuffix": "_fall",
+		"season": "fall",
+		"gear": true
+	  },
+	  "specialClass": "rogue",
+	  "text": "Enchanted Visage",
+	  "notes": "This jinxed stew has given you the fuzzy face and long ears of a donkey! How very Shakespearean. Increases Perception by 9. Limited Edition 2023 Fall Gear.",
+	  "value": 60,
+	  "per": 9,
+	  "type": "head",
+	  "key": "head_special_fall2023Rogue",
+	  "klass": "special",
+	  "index": "fall2023Rogue",
+	  "str": 0,
+	  "int": 0,
+	  "con": 0
+	},
+	"head_special_fall2023Warrior": {
+	  "set": "fall2023ScaryMovieWarriorSet",
+	  "event": {
+		"start": "2023-09-21T08:00-04:00",
+		"end": "2023-10-31T23:59-04:00",
+		"npcImageSuffix": "_fall",
+		"season": "fall",
+		"gear": true
+	  },
+	  "specialClass": "warrior",
+	  "text": "Haunted Screen",
+	  "notes": "What horror lurks in this realm of distortion and static? You'll have to stay tuned to find out! Increases Strength by 9. Limited Edition 2023 Fall Gear.",
+	  "value": 60,
+	  "str": 9,
+	  "type": "head",
+	  "key": "head_special_fall2023Warrior",
+	  "klass": "special",
+	  "index": "fall2023Warrior",
+	  "int": 0,
+	  "per": 0,
+	  "con": 0
+	},
 	"head_mystery_201402": {
 	  "text": "Winged Helm",
 	  "notes": "This winged circlet imbues the wearer with the speed of the wind! Confers no benefit. February 2014 Subscriber Item.",
@@ -25564,6 +25864,72 @@ function getQuestContentByKey(questKey) {
 	  "int": 0,
 	  "per": 0
 	},
+	"shield_special_fall2023Rogue": {
+	  "set": "fall2023WitchsBrewRogueSet",
+	  "text": "Bewitched Bottle",
+	  "notes": "Enchanted with the strongest spells to hold powerful potions. Increases Strength by 8. Limited Edition 2023 Fall Gear.",
+	  "event": {
+		"start": "2023-09-21T08:00-04:00",
+		"end": "2023-10-31T23:59-04:00",
+		"npcImageSuffix": "_fall",
+		"season": "fall",
+		"gear": true
+	  },
+	  "specialClass": "rogue",
+	  "value": 80,
+	  "str": 8,
+	  "type": "shield",
+	  "key": "shield_special_fall2023Rogue",
+	  "klass": "special",
+	  "index": "fall2023Rogue",
+	  "int": 0,
+	  "per": 0,
+	  "con": 0
+	},
+	"shield_special_fall2023Warrior": {
+	  "set": "fall2023ScaryMovieWarriorSet",
+	  "event": {
+		"start": "2023-09-21T08:00-04:00",
+		"end": "2023-10-31T23:59-04:00",
+		"npcImageSuffix": "_fall",
+		"season": "fall",
+		"gear": true
+	  },
+	  "specialClass": "warrior",
+	  "text": "Comfy Pillow",
+	  "notes": "Perfect for making yourself comfortable while enjoying a scary movie... But we won't tell anyone if you need to hug it during the really spooky scenes! Increases Constitution by 7. Limited Edition 2023 Fall Gear.",
+	  "value": 70,
+	  "con": 7,
+	  "type": "shield",
+	  "key": "shield_special_fall2023Warrior",
+	  "klass": "special",
+	  "index": "fall2023Warrior",
+	  "str": 0,
+	  "int": 0,
+	  "per": 0
+	},
+	"shield_special_fall2023Healer": {
+	  "set": "fall2023BogCreatureHealerSet",
+	  "event": {
+		"start": "2023-09-21T08:00-04:00",
+		"end": "2023-10-31T23:59-04:00",
+		"npcImageSuffix": "_fall",
+		"season": "fall",
+		"gear": true
+	  },
+	  "specialClass": "healer",
+	  "text": "Mossy Rock",
+	  "notes": "With a firm base and a soft top, this is perfect to hurl at enemies or to sit upon when you need a rest from your adventures. Increases Constitution by 9. Limited Edition 2023 Fall Gear.",
+	  "value": 70,
+	  "con": 9,
+	  "type": "shield",
+	  "key": "shield_special_fall2023Healer",
+	  "klass": "special",
+	  "index": "fall2023Healer",
+	  "str": 0,
+	  "int": 0,
+	  "per": 0
+	},
 	"shield_mystery_201601": {
 	  "text": "Resolution Slayer",
 	  "notes": "This blade can be used to parry away all distractions. Confers no benefit. January 2016 Subscriber Item.",
@@ -26719,6 +27085,20 @@ function getQuestContentByKey(questKey) {
 	  "klass": "armoire",
 	  "index": "paintersPalette",
 	  "int": 0,
+	  "per": 0,
+	  "con": 0
+	},
+	"shield_armoire_bucket": {
+	  "str": 4,
+	  "int": 4,
+	  "set": "cleaningSuppliesTwo",
+	  "notes": "Though this bucket is helpful in holding a mixture of water and cleaning solution, you could also use it to collect, carry, and cart around just about anything that fits inside! Increases Strength and Intelligence by 4 each. Enchanted Armoire: Cleaning Supplies Set 2 (Item 1 of 3)",
+	  "text": "Bucket",
+	  "value": 100,
+	  "type": "shield",
+	  "key": "shield_armoire_bucket",
+	  "klass": "armoire",
+	  "index": "bucket",
 	  "per": 0,
 	  "con": 0
 	},
@@ -27986,6 +28366,21 @@ function getQuestContentByKey(questKey) {
 	  "per": 0,
 	  "con": 0
 	},
+	"back_mystery_202309": {
+	  "text": "Colossal Comet Moth Wings",
+	  "notes": "Flutter across forests, glide over mountains, and soar over oceans on these bright and beautiful wings. Confers no benefit. September 2023 Subscriber Item.",
+	  "mystery": "202309",
+	  "value": 0,
+	  "type": "back",
+	  "key": "back_mystery_202309",
+	  "set": "mystery-202309",
+	  "klass": "mystery",
+	  "index": "202309",
+	  "str": 0,
+	  "int": 0,
+	  "per": 0,
+	  "con": 0
+	},
 	"headAccessory_base_0": {
 	  "text": "No Head Accessory",
 	  "notes": "No Head Accessory.",
@@ -28820,6 +29215,21 @@ function getQuestContentByKey(questKey) {
 	  "set": "mystery-202307",
 	  "klass": "mystery",
 	  "index": "202307",
+	  "str": 0,
+	  "int": 0,
+	  "per": 0,
+	  "con": 0
+	},
+	"headAccessory_mystery_202309": {
+	  "text": "Colossal Comet Moth Antennae",
+	  "notes": "These antennae are fashionable and feathery, but also help you navigate! Confers no benefit. September 2023 Subscriber Item.",
+	  "mystery": "202309",
+	  "value": 0,
+	  "type": "headAccessory",
+	  "key": "headAccessory_mystery_202309",
+	  "set": "mystery-202309",
+	  "klass": "mystery",
+	  "index": "202309",
 	  "str": 0,
 	  "int": 0,
 	  "per": 0,
