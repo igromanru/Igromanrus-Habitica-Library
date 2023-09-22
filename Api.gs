@@ -297,7 +297,9 @@ function runCron() {
   const result = fetchPost(`${BaseUrl}/v3/cron`);
   if (result !== undefined && result && result.success === true) {
     console.log('Cron was successful');
+    return true;
   }
+  return false;
 }
 
 /**
@@ -378,6 +380,8 @@ function getUserTasks(type = '', dueDate = undefined) {
  * Score/Check a task
  * Valid direction is only "up" or "down"
  * 
+ * Returns an object with "_tmp.drop", "buffs" and typical user stats (hp, mp, lvl etc.)
+ * 
  * See: https://habitica.com/apidoc/#api-Task-ScoreTask
  */
 function scoreTask(taskId, direction = 'up') {
@@ -393,6 +397,8 @@ function scoreTask(taskId, direction = 'up') {
 
 /**
  * Cast a skill/spell on a target
+ * 
+ * Returns response.data which CAN contain "partyMembers" (array of members) or "tasks" (array of tasks) and "user" with updated stats
  * 
  * See: https://habitica.com/apidoc/#api-User-UserCast
  */

@@ -6,7 +6,8 @@
 const ScriptProperties = PropertiesService.getScriptProperties();
 
 /**
- * 
+ * Treats padString parameter as a "character" and repeates it until the string has targetLength of "characters" in string
+ * It works same as the default padStart function, but repeates the whole padString string
  */
 function padLeft(input, targetLength, padString = "&nbsp;") {
   let result = '';
@@ -97,4 +98,30 @@ function getUserStats(user, withBuffs = true, withGear = true) {
   }
 
   return undefined;
+}
+
+/**
+ * Updates user object with new stats
+ */
+function updateUserStats(user, stats) {
+  if (user && user.stats && stats && typeof stats.str === 'number') {
+    console.log(`updateUserStats: Old stats: ${JSON.stringify(user.stats)}\nNew stats: ${JSON.stringify(stats)}`)
+    if (stats.buffs && typeof stats.buffs.str === 'number') {
+      user.stats.buffs = stats.buffs;
+    }
+    if (stats.training && typeof stats.training.str === 'number') {
+      user.stats.training = stats.training;
+    }
+    user.stats.hp = stats.hp;
+    user.stats.mp = stats.mp;
+    user.stats.exp = stats.exp;
+    user.stats.gp = stats.gp;
+    user.stats.lvl = stats.lvl;
+    user.stats.class = stats.class;
+    user.stats.points = stats.points;
+    user.stats.str = stats.str;
+    user.stats.con = stats.con;
+    user.stats.int = stats.int;
+    user.stats.per = stats.per;
+  }
 }
