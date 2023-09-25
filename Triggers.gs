@@ -23,3 +23,22 @@ function executeAsTriggerAsap(functionName) {
       .create();
   }
 }
+
+/**
+ * Deletes all triggers that call a specific function
+ * 
+ * Returns the number of triggers that have been deleted
+ */
+function deleteTriggerByFunction(functionName) {
+  let deleteCount = 0;
+
+  const triggers = ScriptApp.getProjectTriggers();
+  for (const trigger of triggers) {
+    if (trigger.getHandlerFunction() === functionName) {
+      ScriptApp.deleteTrigger(trigger);
+      deleteCount++;
+    }
+  }
+
+  return deleteCount;
+}
