@@ -4,6 +4,8 @@
  */
 
 const ScriptProperties = PropertiesService.getScriptProperties();
+const ScriptLock = LockService.getScriptLock();
+const DefaultLockTime = 30 * 1000; // 30 seconds
 
 /**
  * Treats padString parameter as a "character" and repeates it until the string has targetLength of "characters" in string
@@ -124,4 +126,15 @@ function updateUserStats(user, stats) {
     user.stats.int = stats.int;
     user.stats.per = stats.per;
   }
+}
+
+function getMemberFromArrayById(members, memberId) {
+  if (members && Array.isArray(members) && memberId && typeof memberId === 'string') {
+    for (const member of members) {
+      if (member && member._id == memberId) {
+        return member;
+      }
+    }
+  }
+  return undefined;
 }
