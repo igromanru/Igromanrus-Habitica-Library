@@ -40,16 +40,41 @@ function getRandomBooleanWithProbability(probability) {
  * Checks if last cron were executed before today
  */
 function isCronPending(user) {
-  if(!user || !user.lastCron) {
-    return false;
+  if(user && user.lastCron && typeof user.preferences.dayStart === 'number') {
+    const lastCronDate = new Date(user.lastCron);
+    const today = new Date();
+    today.setHours(user.preferences.dayStart, 0, 0, 0);
+
+    return lastCronDate < today;
   }
 
-  const lastCronDate = new Date(user.lastCron);
-  lastCronDate.setHours(0, 0, 0, 0);
-  const today = new Date();
-  today.setHours(0, 0, 0, 0);
+  return false;
+}
 
-  return lastCronDate < today;
+/**
+ * Hours left till the next day starts
+ * 
+ * Returns -1, if failed
+ */
+function getHoursDifferenceToDayStart(user) {
+  if (!user) {
+    console.error('Failed to get get hours difference to day start.\nUser object is undefined');
+    return -1;
+  }
+  const dayStartOffset = user.preferences.dayStart;
+  const now = new Date();
+  var hours = now.getHours();
+
+  const nextDayStart = new Date();
+  if (hours >= dayStartOffset) {
+    nextDayStart.setHours(24 + dayStartOffset, 0, 0, 0);
+  } else {
+    nextDayStart.setHours(dayStartOffset, 0, 0, 0);
+  }
+  const timeDifference = nextDayStart - now;
+  const hoursDifferenceToDayStart = Math.round(timeDifference / (1000 * 60 * 60) * 10) / 10;
+
+  return hoursDifferenceToDayStart;
 }
 
 /**
