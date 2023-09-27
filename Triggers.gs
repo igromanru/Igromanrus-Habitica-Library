@@ -9,19 +9,16 @@
  */
 function executeAsTriggerAsap(functionName) {
   const triggers = ScriptApp.getProjectTriggers();
-  let triggerExists = false;
   for (const trigger of triggers) {
     if (trigger.getHandlerFunction() === functionName) {
-      triggerExists = true;
-      break;
+      return false;
     }
   }
-  if (!triggerExists) {
-    ScriptApp.newTrigger(functionName)
-      .timeBased()
-      .after(1)
-      .create();
-  }
+  ScriptApp.newTrigger(functionName)
+    .timeBased()
+    .after(1)
+    .create();
+  return true;
 }
 
 /**
