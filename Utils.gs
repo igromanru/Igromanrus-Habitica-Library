@@ -52,13 +52,13 @@ function isCronPending(user) {
 }
 
 /**
- * Hours left till the next day starts
+ * Hours left till the next day start
  * 
  * Returns -1, if failed
  */
 function getHoursDifferenceToDayStart(user) {
   if (!user) {
-    console.error('Failed to get get hours difference to day start.\nUser object is undefined');
+    console.error('Failed to get hours difference to day start.\nUser object is undefined');
     return -1;
   }
   const dayStartOffset = user.preferences.dayStart;
@@ -132,7 +132,7 @@ function getUserStats(user, withBuffs = true, withGear = true) {
  */
 function updateUserStats(user, stats) {
   if (user && user.stats && stats && typeof stats.str === 'number') {
-    console.log(`updateUserStats: Old stats: ${JSON.stringify(user.stats)}\nNew stats: ${JSON.stringify(stats)}`)
+    // console.log(`updateUserStats: Old stats: ${JSON.stringify(user.stats)}\nNew stats: ${JSON.stringify(stats)}`)
     if (stats.buffs && typeof stats.buffs.str === 'number') {
       user.stats.buffs = stats.buffs;
     }

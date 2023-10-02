@@ -547,11 +547,15 @@ function fetch(url, method = 'GET', params = {}) {
           }
         }
       }
+    } else {
+      console.error(`Request: ${url}\nResponse code: ${responseCode}\nContent: ${contentText}`);
+      const retryInMs = 15000;
+      console.info(`Retrying the request in ${retryInMs / 1000} seconds`);
+      Utilities.sleep(retryInMs);
+      continue;
     }
 
-    throw new Error(`Request: ${url}\nResponse code: ${responseCode}\nContent: ${contentText}`);
-    // console.error(`Request: ${url}\nResponse code: ${responseCode}\nContent: ${contentText}`);
-    return undefined;
+    // throw new Error(`Request: ${url}\nResponse code: ${responseCode}\nContent: ${contentText}`);
   }
 
   return undefined;

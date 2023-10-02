@@ -1,22 +1,7 @@
-/*const HABITICA_QUESTS_CONTENT_PROPERTY = "HABITICA_QUESTS_CONTENT";
-
-function getHabiticaQuestsContent() {
-  const content = ScriptProperties.getProperty(HABITICA_QUESTS_CONTENT_PROPERTY);
-  if (content && typeof content === "string") {
-    return JSON.parse(content);
-  }
-  return undefined;
-}
-
-function setHabiticaQuestsContent(content) {
-  if (content) {
-    if (typeof content === "string") {
-      ScriptProperties.setProperty(HABITICA_QUESTS_CONTENT_PROPERTY, content);
-    } else if (typeof content === "object") {
-      ScriptProperties.setProperty(HABITICA_QUESTS_CONTENT_PROPERTY, JSON.stringify(content));
-    }
-  }
-}*/
+/**
+ * Author: Igromanru
+ * Source: https://github.com/igromanru/Igromanrus-Habitica-Library
+ */
 
 function getQuestContentByKey(questKey) {
 	if (typeof questKey === "string" && questKey) {
