@@ -454,7 +454,7 @@ function createWebHook(targetUrl, label, type = 'taskActivity', options = undefi
         "options": options
       });
     }
-    if (id) {
+    if (typeof id === 'string' && id) {
       requestBody = Object.assign(requestBody, {
         "id": id
       });
