@@ -28,7 +28,7 @@ function getQuestContentByKey(questKey) {
   /**
    * 
    * Habitica Content: https://habitica.com/apidoc/#api-Content-ContentGet
-   * From: 12.09.2023
+   * From: 10.10.2023
    */
   // The "quests" part of the habitica content
   const HabiticaQuestsContent = {
@@ -4495,204 +4495,6 @@ function getQuestContentByKey(questKey) {
   
   // The "gear.flat" part of the habitica content
   const HabiticaFlatGearContent = {
-	"weapon_warrior_0": {
-	  "text": "Training Sword",
-	  "notes": "Practice weapon. Confers no benefit. ",
-	  "value": 1,
-	  "type": "weapon",
-	  "key": "weapon_warrior_0",
-	  "set": "warrior-0",
-	  "klass": "warrior",
-	  "index": "0",
-	  "str": 0,
-	  "int": 0,
-	  "per": 0,
-	  "con": 0
-	},
-	"weapon_warrior_1": {
-	  "text": "Sword",
-	  "notes": "Common soldier's blade. Increases Strength by 3. ",
-	  "str": 3,
-	  "value": 20,
-	  "type": "weapon",
-	  "key": "weapon_warrior_1",
-	  "set": "warrior-1",
-	  "klass": "warrior",
-	  "index": "1",
-	  "int": 0,
-	  "per": 0,
-	  "con": 0
-	},
-	"weapon_warrior_2": {
-	  "text": "Axe",
-	  "notes": "Double-bitted chopping weapon. Increases Strength by 6. ",
-	  "str": 6,
-	  "value": 30,
-	  "type": "weapon",
-	  "key": "weapon_warrior_2",
-	  "set": "warrior-2",
-	  "klass": "warrior",
-	  "index": "2",
-	  "int": 0,
-	  "per": 0,
-	  "con": 0
-	},
-	"weapon_warrior_3": {
-	  "text": "Morning Star",
-	  "notes": "Heavy club with brutal spikes. Increases Strength by 9. ",
-	  "str": 9,
-	  "value": 45,
-	  "type": "weapon",
-	  "key": "weapon_warrior_3",
-	  "set": "warrior-3",
-	  "klass": "warrior",
-	  "index": "3",
-	  "int": 0,
-	  "per": 0,
-	  "con": 0
-	},
-	"weapon_warrior_4": {
-	  "text": "Sapphire Blade",
-	  "notes": "Sword whose edge bites like the north wind. Increases Strength by 12. ",
-	  "str": 12,
-	  "value": 65,
-	  "type": "weapon",
-	  "key": "weapon_warrior_4",
-	  "set": "warrior-4",
-	  "klass": "warrior",
-	  "index": "4",
-	  "int": 0,
-	  "per": 0,
-	  "con": 0
-	},
-	"weapon_warrior_5": {
-	  "text": "Ruby Sword",
-	  "notes": "Weapon whose forge-glow never fades. Increases Strength by 15. ",
-	  "str": 15,
-	  "value": 90,
-	  "type": "weapon",
-	  "key": "weapon_warrior_5",
-	  "set": "warrior-5",
-	  "klass": "warrior",
-	  "index": "5",
-	  "int": 0,
-	  "per": 0,
-	  "con": 0
-	},
-	"weapon_warrior_6": {
-	  "text": "Golden Sword",
-	  "notes": "Bane of creatures of darkness. Increases Strength by 18. ",
-	  "str": 18,
-	  "value": 120,
-	  "last": true,
-	  "type": "weapon",
-	  "key": "weapon_warrior_6",
-	  "set": "warrior-6",
-	  "klass": "warrior",
-	  "index": "6",
-	  "int": 0,
-	  "per": 0,
-	  "con": 0
-	},
-	"weapon_rogue_0": {
-	  "text": "Dagger",
-	  "notes": "A rogue's most basic weapon. Confers no benefit. ",
-	  "str": 0,
-	  "value": 0,
-	  "type": "weapon",
-	  "key": "weapon_rogue_0",
-	  "set": "rogue-0",
-	  "klass": "rogue",
-	  "index": "0",
-	  "int": 0,
-	  "per": 0,
-	  "con": 0
-	},
-	"weapon_rogue_1": {
-	  "text": "Short Sword",
-	  "notes": "Light, concealable blade. Increases Strength by 2. ",
-	  "str": 2,
-	  "value": 20,
-	  "type": "weapon",
-	  "key": "weapon_rogue_1",
-	  "set": "rogue-1",
-	  "klass": "rogue",
-	  "index": "1",
-	  "int": 0,
-	  "per": 0,
-	  "con": 0
-	},
-	"weapon_rogue_2": {
-	  "text": "Scimitar",
-	  "notes": "Slashing sword, swift to deliver a killing blow. Increases Strength by 3. ",
-	  "str": 3,
-	  "value": 35,
-	  "type": "weapon",
-	  "key": "weapon_rogue_2",
-	  "set": "rogue-2",
-	  "klass": "rogue",
-	  "index": "2",
-	  "int": 0,
-	  "per": 0,
-	  "con": 0
-	},
-	"weapon_rogue_3": {
-	  "text": "Kukri",
-	  "notes": "Distinctive bush knife, both survival tool and weapon. Increases Strength by 4. ",
-	  "str": 4,
-	  "value": 50,
-	  "type": "weapon",
-	  "key": "weapon_rogue_3",
-	  "set": "rogue-3",
-	  "klass": "rogue",
-	  "index": "3",
-	  "int": 0,
-	  "per": 0,
-	  "con": 0
-	},
-	"weapon_rogue_4": {
-	  "text": "Nunchaku",
-	  "notes": "Heavy batons whirled about on a length of chain. Increases Strength by 6. ",
-	  "str": 6,
-	  "value": 70,
-	  "type": "weapon",
-	  "key": "weapon_rogue_4",
-	  "set": "rogue-4",
-	  "klass": "rogue",
-	  "index": "4",
-	  "int": 0,
-	  "per": 0,
-	  "con": 0
-	},
-	"weapon_rogue_5": {
-	  "text": "Ninja-to",
-	  "notes": "Sleek and deadly as the ninja themselves. Increases Strength by 8. ",
-	  "str": 8,
-	  "value": 90,
-	  "type": "weapon",
-	  "key": "weapon_rogue_5",
-	  "set": "rogue-5",
-	  "klass": "rogue",
-	  "index": "5",
-	  "int": 0,
-	  "per": 0,
-	  "con": 0
-	},
-	"weapon_rogue_6": {
-	  "text": "Hook Sword",
-	  "notes": "Complex weapon adept at ensnaring and disarming opponents. Increases Strength by 10. ",
-	  "str": 10,
-	  "value": 120,
-	  "last": true,
-	  "type": "weapon",
-	  "key": "weapon_rogue_6",
-	  "set": "rogue-6",
-	  "klass": "rogue",
-	  "index": "6",
-	  "int": 0,
-	  "per": 0,
-	  "con": 0
-	},
 	"weapon_healer_0": {
 	  "text": "Novice Rod",
 	  "notes": "For healers in training. Confers no benefit. ",
@@ -4896,6 +4698,204 @@ function getQuestContentByKey(questKey) {
 	  "klass": "wizard",
 	  "index": "6",
 	  "str": 0,
+	  "con": 0
+	},
+	"weapon_rogue_0": {
+	  "text": "Dagger",
+	  "notes": "A rogue's most basic weapon. Confers no benefit. ",
+	  "str": 0,
+	  "value": 0,
+	  "type": "weapon",
+	  "key": "weapon_rogue_0",
+	  "set": "rogue-0",
+	  "klass": "rogue",
+	  "index": "0",
+	  "int": 0,
+	  "per": 0,
+	  "con": 0
+	},
+	"weapon_rogue_1": {
+	  "text": "Short Sword",
+	  "notes": "Light, concealable blade. Increases Strength by 2. ",
+	  "str": 2,
+	  "value": 20,
+	  "type": "weapon",
+	  "key": "weapon_rogue_1",
+	  "set": "rogue-1",
+	  "klass": "rogue",
+	  "index": "1",
+	  "int": 0,
+	  "per": 0,
+	  "con": 0
+	},
+	"weapon_rogue_2": {
+	  "text": "Scimitar",
+	  "notes": "Slashing sword, swift to deliver a killing blow. Increases Strength by 3. ",
+	  "str": 3,
+	  "value": 35,
+	  "type": "weapon",
+	  "key": "weapon_rogue_2",
+	  "set": "rogue-2",
+	  "klass": "rogue",
+	  "index": "2",
+	  "int": 0,
+	  "per": 0,
+	  "con": 0
+	},
+	"weapon_rogue_3": {
+	  "text": "Kukri",
+	  "notes": "Distinctive bush knife, both survival tool and weapon. Increases Strength by 4. ",
+	  "str": 4,
+	  "value": 50,
+	  "type": "weapon",
+	  "key": "weapon_rogue_3",
+	  "set": "rogue-3",
+	  "klass": "rogue",
+	  "index": "3",
+	  "int": 0,
+	  "per": 0,
+	  "con": 0
+	},
+	"weapon_rogue_4": {
+	  "text": "Nunchaku",
+	  "notes": "Heavy batons whirled about on a length of chain. Increases Strength by 6. ",
+	  "str": 6,
+	  "value": 70,
+	  "type": "weapon",
+	  "key": "weapon_rogue_4",
+	  "set": "rogue-4",
+	  "klass": "rogue",
+	  "index": "4",
+	  "int": 0,
+	  "per": 0,
+	  "con": 0
+	},
+	"weapon_rogue_5": {
+	  "text": "Ninja-to",
+	  "notes": "Sleek and deadly as the ninja themselves. Increases Strength by 8. ",
+	  "str": 8,
+	  "value": 90,
+	  "type": "weapon",
+	  "key": "weapon_rogue_5",
+	  "set": "rogue-5",
+	  "klass": "rogue",
+	  "index": "5",
+	  "int": 0,
+	  "per": 0,
+	  "con": 0
+	},
+	"weapon_rogue_6": {
+	  "text": "Hook Sword",
+	  "notes": "Complex weapon adept at ensnaring and disarming opponents. Increases Strength by 10. ",
+	  "str": 10,
+	  "value": 120,
+	  "last": true,
+	  "type": "weapon",
+	  "key": "weapon_rogue_6",
+	  "set": "rogue-6",
+	  "klass": "rogue",
+	  "index": "6",
+	  "int": 0,
+	  "per": 0,
+	  "con": 0
+	},
+	"weapon_warrior_0": {
+	  "text": "Training Sword",
+	  "notes": "Practice weapon. Confers no benefit. ",
+	  "value": 1,
+	  "type": "weapon",
+	  "key": "weapon_warrior_0",
+	  "set": "warrior-0",
+	  "klass": "warrior",
+	  "index": "0",
+	  "str": 0,
+	  "int": 0,
+	  "per": 0,
+	  "con": 0
+	},
+	"weapon_warrior_1": {
+	  "text": "Sword",
+	  "notes": "Common soldier's blade. Increases Strength by 3. ",
+	  "str": 3,
+	  "value": 20,
+	  "type": "weapon",
+	  "key": "weapon_warrior_1",
+	  "set": "warrior-1",
+	  "klass": "warrior",
+	  "index": "1",
+	  "int": 0,
+	  "per": 0,
+	  "con": 0
+	},
+	"weapon_warrior_2": {
+	  "text": "Axe",
+	  "notes": "Double-bitted chopping weapon. Increases Strength by 6. ",
+	  "str": 6,
+	  "value": 30,
+	  "type": "weapon",
+	  "key": "weapon_warrior_2",
+	  "set": "warrior-2",
+	  "klass": "warrior",
+	  "index": "2",
+	  "int": 0,
+	  "per": 0,
+	  "con": 0
+	},
+	"weapon_warrior_3": {
+	  "text": "Morning Star",
+	  "notes": "Heavy club with brutal spikes. Increases Strength by 9. ",
+	  "str": 9,
+	  "value": 45,
+	  "type": "weapon",
+	  "key": "weapon_warrior_3",
+	  "set": "warrior-3",
+	  "klass": "warrior",
+	  "index": "3",
+	  "int": 0,
+	  "per": 0,
+	  "con": 0
+	},
+	"weapon_warrior_4": {
+	  "text": "Sapphire Blade",
+	  "notes": "Sword whose edge bites like the north wind. Increases Strength by 12. ",
+	  "str": 12,
+	  "value": 65,
+	  "type": "weapon",
+	  "key": "weapon_warrior_4",
+	  "set": "warrior-4",
+	  "klass": "warrior",
+	  "index": "4",
+	  "int": 0,
+	  "per": 0,
+	  "con": 0
+	},
+	"weapon_warrior_5": {
+	  "text": "Ruby Sword",
+	  "notes": "Weapon whose forge-glow never fades. Increases Strength by 15. ",
+	  "str": 15,
+	  "value": 90,
+	  "type": "weapon",
+	  "key": "weapon_warrior_5",
+	  "set": "warrior-5",
+	  "klass": "warrior",
+	  "index": "5",
+	  "int": 0,
+	  "per": 0,
+	  "con": 0
+	},
+	"weapon_warrior_6": {
+	  "text": "Golden Sword",
+	  "notes": "Bane of creatures of darkness. Increases Strength by 18. ",
+	  "str": 18,
+	  "value": 120,
+	  "last": true,
+	  "type": "weapon",
+	  "key": "weapon_warrior_6",
+	  "set": "warrior-6",
+	  "klass": "warrior",
+	  "index": "6",
+	  "int": 0,
+	  "per": 0,
 	  "con": 0
 	},
 	"weapon_base_0": {
@@ -5400,8 +5400,10 @@ function getQuestContentByKey(questKey) {
 	"weapon_special_fallRogue": {
 	  "set": "vampireSmiterSet",
 	  "event": {
-		"start": "2014-09-21",
-		"end": "2014-11-01",
+		"start": "2023-09-21T08:00-04:00",
+		"end": "2023-10-31T23:59-04:00",
+		"npcImageSuffix": "_fall",
+		"season": "fall",
 		"gear": true
 	  },
 	  "specialClass": "rogue",
@@ -5421,8 +5423,10 @@ function getQuestContentByKey(questKey) {
 	"weapon_special_fallWarrior": {
 	  "set": "monsterOfScienceSet",
 	  "event": {
-		"start": "2014-09-21",
-		"end": "2014-11-01",
+		"start": "2023-09-21T08:00-04:00",
+		"end": "2023-10-31T23:59-04:00",
+		"npcImageSuffix": "_fall",
+		"season": "fall",
 		"gear": true
 	  },
 	  "specialClass": "warrior",
@@ -5442,8 +5446,10 @@ function getQuestContentByKey(questKey) {
 	"weapon_special_fallMage": {
 	  "set": "witchyWizardSet",
 	  "event": {
-		"start": "2014-09-21",
-		"end": "2014-11-01",
+		"start": "2023-09-21T08:00-04:00",
+		"end": "2023-10-31T23:59-04:00",
+		"npcImageSuffix": "_fall",
+		"season": "fall",
 		"gear": true
 	  },
 	  "specialClass": "wizard",
@@ -5463,8 +5469,10 @@ function getQuestContentByKey(questKey) {
 	"weapon_special_fallHealer": {
 	  "set": "mummyMedicSet",
 	  "event": {
-		"start": "2014-09-21",
-		"end": "2014-11-01",
+		"start": "2023-09-21T08:00-04:00",
+		"end": "2023-10-31T23:59-04:00",
+		"npcImageSuffix": "_fall",
+		"season": "fall",
 		"gear": true
 	  },
 	  "specialClass": "healer",
@@ -5736,8 +5744,10 @@ function getQuestContentByKey(questKey) {
 	"weapon_special_fall2015Rogue": {
 	  "set": "battleRogueSet",
 	  "event": {
-		"start": "2015-09-21",
-		"end": "2015-11-01",
+		"start": "2023-09-21T08:00-04:00",
+		"end": "2023-10-31T23:59-04:00",
+		"npcImageSuffix": "_fall",
+		"season": "fall",
 		"gear": true
 	  },
 	  "specialClass": "rogue",
@@ -5757,8 +5767,10 @@ function getQuestContentByKey(questKey) {
 	"weapon_special_fall2015Warrior": {
 	  "set": "scarecrowWarriorSet",
 	  "event": {
-		"start": "2015-09-21",
-		"end": "2015-11-01",
+		"start": "2023-09-21T08:00-04:00",
+		"end": "2023-10-31T23:59-04:00",
+		"npcImageSuffix": "_fall",
+		"season": "fall",
 		"gear": true
 	  },
 	  "specialClass": "warrior",
@@ -5778,8 +5790,10 @@ function getQuestContentByKey(questKey) {
 	"weapon_special_fall2015Mage": {
 	  "set": "stitchWitchSet",
 	  "event": {
-		"start": "2015-09-21",
-		"end": "2015-11-01",
+		"start": "2023-09-21T08:00-04:00",
+		"end": "2023-10-31T23:59-04:00",
+		"npcImageSuffix": "_fall",
+		"season": "fall",
 		"gear": true
 	  },
 	  "specialClass": "wizard",
@@ -5799,8 +5813,10 @@ function getQuestContentByKey(questKey) {
 	"weapon_special_fall2015Healer": {
 	  "set": "potionerSet",
 	  "event": {
-		"start": "2015-09-21",
-		"end": "2015-11-01",
+		"start": "2023-09-21T08:00-04:00",
+		"end": "2023-10-31T23:59-04:00",
+		"npcImageSuffix": "_fall",
+		"season": "fall",
 		"gear": true
 	  },
 	  "specialClass": "healer",
@@ -6072,8 +6088,10 @@ function getQuestContentByKey(questKey) {
 	"weapon_special_fall2016Rogue": {
 	  "set": "fall2016BlackWidowSet",
 	  "event": {
-		"start": "2016-09-20",
-		"end": "2016-11-02",
+		"start": "2023-09-21T08:00-04:00",
+		"end": "2023-10-31T23:59-04:00",
+		"npcImageSuffix": "_fall",
+		"season": "fall",
 		"gear": true
 	  },
 	  "specialClass": "rogue",
@@ -6093,8 +6111,10 @@ function getQuestContentByKey(questKey) {
 	"weapon_special_fall2016Warrior": {
 	  "set": "fall2016SwampThingSet",
 	  "event": {
-		"start": "2016-09-20",
-		"end": "2016-11-02",
+		"start": "2023-09-21T08:00-04:00",
+		"end": "2023-10-31T23:59-04:00",
+		"npcImageSuffix": "_fall",
+		"season": "fall",
 		"gear": true
 	  },
 	  "specialClass": "warrior",
@@ -6114,8 +6134,10 @@ function getQuestContentByKey(questKey) {
 	"weapon_special_fall2016Mage": {
 	  "set": "fall2016WickedSorcererSet",
 	  "event": {
-		"start": "2016-09-20",
-		"end": "2016-11-02",
+		"start": "2023-09-21T08:00-04:00",
+		"end": "2023-10-31T23:59-04:00",
+		"npcImageSuffix": "_fall",
+		"season": "fall",
 		"gear": true
 	  },
 	  "specialClass": "wizard",
@@ -6135,8 +6157,10 @@ function getQuestContentByKey(questKey) {
 	"weapon_special_fall2016Healer": {
 	  "set": "fall2016GorgonHealerSet",
 	  "event": {
-		"start": "2016-09-20",
-		"end": "2016-11-02",
+		"start": "2023-09-21T08:00-04:00",
+		"end": "2023-10-31T23:59-04:00",
+		"npcImageSuffix": "_fall",
+		"season": "fall",
 		"gear": true
 	  },
 	  "specialClass": "healer",
@@ -6408,8 +6432,10 @@ function getQuestContentByKey(questKey) {
 	"weapon_special_fall2017Rogue": {
 	  "set": "fall2017TrickOrTreatSet",
 	  "event": {
-		"start": "2017-09-21",
-		"end": "2017-11-02",
+		"start": "2023-09-21T08:00-04:00",
+		"end": "2023-10-31T23:59-04:00",
+		"npcImageSuffix": "_fall",
+		"season": "fall",
 		"gear": true
 	  },
 	  "specialClass": "rogue",
@@ -6429,8 +6455,10 @@ function getQuestContentByKey(questKey) {
 	"weapon_special_fall2017Warrior": {
 	  "set": "fall2017HabitoweenSet",
 	  "event": {
-		"start": "2017-09-21",
-		"end": "2017-11-02",
+		"start": "2023-09-21T08:00-04:00",
+		"end": "2023-10-31T23:59-04:00",
+		"npcImageSuffix": "_fall",
+		"season": "fall",
 		"gear": true
 	  },
 	  "specialClass": "warrior",
@@ -6450,8 +6478,10 @@ function getQuestContentByKey(questKey) {
 	"weapon_special_fall2017Mage": {
 	  "set": "fall2017MasqueradeSet",
 	  "event": {
-		"start": "2017-09-21",
-		"end": "2017-11-02",
+		"start": "2023-09-21T08:00-04:00",
+		"end": "2023-10-31T23:59-04:00",
+		"npcImageSuffix": "_fall",
+		"season": "fall",
 		"gear": true
 	  },
 	  "specialClass": "wizard",
@@ -6471,8 +6501,10 @@ function getQuestContentByKey(questKey) {
 	"weapon_special_fall2017Healer": {
 	  "set": "fall2017HauntedHouseSet",
 	  "event": {
-		"start": "2017-09-21",
-		"end": "2017-11-02",
+		"start": "2023-09-21T08:00-04:00",
+		"end": "2023-10-31T23:59-04:00",
+		"npcImageSuffix": "_fall",
+		"season": "fall",
 		"gear": true
 	  },
 	  "specialClass": "healer",
@@ -6744,8 +6776,10 @@ function getQuestContentByKey(questKey) {
 	"weapon_special_fall2018Rogue": {
 	  "set": "fall2018AlterEgoSet",
 	  "event": {
-		"start": "2018-09-20",
-		"end": "2018-11-02",
+		"start": "2023-09-21T08:00-04:00",
+		"end": "2023-10-31T23:59-04:00",
+		"npcImageSuffix": "_fall",
+		"season": "fall",
 		"gear": true
 	  },
 	  "specialClass": "rogue",
@@ -6765,8 +6799,10 @@ function getQuestContentByKey(questKey) {
 	"weapon_special_fall2018Warrior": {
 	  "set": "fall2018MinotaurWarriorSet",
 	  "event": {
-		"start": "2018-09-20",
-		"end": "2018-11-02",
+		"start": "2023-09-21T08:00-04:00",
+		"end": "2023-10-31T23:59-04:00",
+		"npcImageSuffix": "_fall",
+		"season": "fall",
 		"gear": true
 	  },
 	  "specialClass": "warrior",
@@ -6786,8 +6822,10 @@ function getQuestContentByKey(questKey) {
 	"weapon_special_fall2018Mage": {
 	  "set": "fall2018CandymancerMageSet",
 	  "event": {
-		"start": "2018-09-20",
-		"end": "2018-11-02",
+		"start": "2023-09-21T08:00-04:00",
+		"end": "2023-10-31T23:59-04:00",
+		"npcImageSuffix": "_fall",
+		"season": "fall",
 		"gear": true
 	  },
 	  "specialClass": "wizard",
@@ -6807,8 +6845,10 @@ function getQuestContentByKey(questKey) {
 	"weapon_special_fall2018Healer": {
 	  "set": "fall2018CarnivorousPlantSet",
 	  "event": {
-		"start": "2018-09-20",
-		"end": "2018-11-02",
+		"start": "2023-09-21T08:00-04:00",
+		"end": "2023-10-31T23:59-04:00",
+		"npcImageSuffix": "_fall",
+		"season": "fall",
 		"gear": true
 	  },
 	  "specialClass": "healer",
@@ -7080,8 +7120,10 @@ function getQuestContentByKey(questKey) {
 	"weapon_special_fall2019Rogue": {
 	  "set": "fall2019OperaticSpecterSet",
 	  "event": {
-		"start": "2019-09-24",
-		"end": "2019-11-02",
+		"start": "2023-09-21T08:00-04:00",
+		"end": "2023-10-31T23:59-04:00",
+		"npcImageSuffix": "_fall",
+		"season": "fall",
 		"gear": true
 	  },
 	  "specialClass": "rogue",
@@ -7101,8 +7143,10 @@ function getQuestContentByKey(questKey) {
 	"weapon_special_fall2019Warrior": {
 	  "set": "fall2019RavenSet",
 	  "event": {
-		"start": "2019-09-24",
-		"end": "2019-11-02",
+		"start": "2023-09-21T08:00-04:00",
+		"end": "2023-10-31T23:59-04:00",
+		"npcImageSuffix": "_fall",
+		"season": "fall",
 		"gear": true
 	  },
 	  "specialClass": "warrior",
@@ -7122,8 +7166,10 @@ function getQuestContentByKey(questKey) {
 	"weapon_special_fall2019Mage": {
 	  "set": "fall2019CyclopsSet",
 	  "event": {
-		"start": "2019-09-24",
-		"end": "2019-11-02",
+		"start": "2023-09-21T08:00-04:00",
+		"end": "2023-10-31T23:59-04:00",
+		"npcImageSuffix": "_fall",
+		"season": "fall",
 		"gear": true
 	  },
 	  "specialClass": "wizard",
@@ -7143,8 +7189,10 @@ function getQuestContentByKey(questKey) {
 	"weapon_special_fall2019Healer": {
 	  "set": "fall2019LichSet",
 	  "event": {
-		"start": "2019-09-24",
-		"end": "2019-11-02",
+		"start": "2023-09-21T08:00-04:00",
+		"end": "2023-10-31T23:59-04:00",
+		"npcImageSuffix": "_fall",
+		"season": "fall",
 		"gear": true
 	  },
 	  "specialClass": "healer",
@@ -7430,15 +7478,11 @@ function getQuestContentByKey(questKey) {
 	"weapon_special_fall2020Rogue": {
 	  "set": "fall2020TwoHeadedRogueSet",
 	  "event": {
-		"start": "2020-09-22T08:00-04:00",
-		"end": "2020-10-31T20:00-04:00",
-		"gear": true,
-		"gemsPromo": {
-		  "4gems": 5,
-		  "21gems": 30,
-		  "42gems": 60,
-		  "84gems": 125
-		}
+		"start": "2023-09-21T08:00-04:00",
+		"end": "2023-10-31T23:59-04:00",
+		"npcImageSuffix": "_fall",
+		"season": "fall",
+		"gear": true
 	  },
 	  "specialClass": "rogue",
 	  "text": "Sharp Katar",
@@ -7457,15 +7501,11 @@ function getQuestContentByKey(questKey) {
 	"weapon_special_fall2020Warrior": {
 	  "set": "fall2020WraithWarriorSet",
 	  "event": {
-		"start": "2020-09-22T08:00-04:00",
-		"end": "2020-10-31T20:00-04:00",
-		"gear": true,
-		"gemsPromo": {
-		  "4gems": 5,
-		  "21gems": 30,
-		  "42gems": 60,
-		  "84gems": 125
-		}
+		"start": "2023-09-21T08:00-04:00",
+		"end": "2023-10-31T23:59-04:00",
+		"npcImageSuffix": "_fall",
+		"season": "fall",
+		"gear": true
 	  },
 	  "specialClass": "warrior",
 	  "text": "Spectre's Sword",
@@ -7484,15 +7524,11 @@ function getQuestContentByKey(questKey) {
 	"weapon_special_fall2020Mage": {
 	  "set": "fall2020ThirdEyeMageSet",
 	  "event": {
-		"start": "2020-09-22T08:00-04:00",
-		"end": "2020-10-31T20:00-04:00",
-		"gear": true,
-		"gemsPromo": {
-		  "4gems": 5,
-		  "21gems": 30,
-		  "42gems": 60,
-		  "84gems": 125
-		}
+		"start": "2023-09-21T08:00-04:00",
+		"end": "2023-10-31T23:59-04:00",
+		"npcImageSuffix": "_fall",
+		"season": "fall",
+		"gear": true
 	  },
 	  "specialClass": "wizard",
 	  "text": "Three Visions",
@@ -7511,15 +7547,11 @@ function getQuestContentByKey(questKey) {
 	"weapon_special_fall2020Healer": {
 	  "set": "fall2020DeathsHeadMothHealerSet",
 	  "event": {
-		"start": "2020-09-22T08:00-04:00",
-		"end": "2020-10-31T20:00-04:00",
-		"gear": true,
-		"gemsPromo": {
-		  "4gems": 5,
-		  "21gems": 30,
-		  "42gems": 60,
-		  "84gems": 125
-		}
+		"start": "2023-09-21T08:00-04:00",
+		"end": "2023-10-31T23:59-04:00",
+		"npcImageSuffix": "_fall",
+		"season": "fall",
+		"gear": true
 	  },
 	  "specialClass": "healer",
 	  "text": "Cocoon Cane",
@@ -7814,8 +7846,8 @@ function getQuestContentByKey(questKey) {
 	"weapon_special_fall2021Rogue": {
 	  "set": "fall2021OozeRogueSet",
 	  "event": {
-		"start": "2021-09-21T08:00-04:00",
-		"end": "2021-10-31T20:00-04:00",
+		"start": "2023-09-21T08:00-04:00",
+		"end": "2023-10-31T23:59-04:00",
 		"npcImageSuffix": "_fall",
 		"season": "fall",
 		"gear": true
@@ -7837,8 +7869,8 @@ function getQuestContentByKey(questKey) {
 	"weapon_special_fall2021Warrior": {
 	  "set": "fall2021HeadlessWarriorSet",
 	  "event": {
-		"start": "2021-09-21T08:00-04:00",
-		"end": "2021-10-31T20:00-04:00",
+		"start": "2023-09-21T08:00-04:00",
+		"end": "2023-10-31T23:59-04:00",
 		"npcImageSuffix": "_fall",
 		"season": "fall",
 		"gear": true
@@ -7860,8 +7892,8 @@ function getQuestContentByKey(questKey) {
 	"weapon_special_fall2021Mage": {
 	  "set": "fall2021BrainEaterMageSet",
 	  "event": {
-		"start": "2021-09-21T08:00-04:00",
-		"end": "2021-10-31T20:00-04:00",
+		"start": "2023-09-21T08:00-04:00",
+		"end": "2023-10-31T23:59-04:00",
 		"npcImageSuffix": "_fall",
 		"season": "fall",
 		"gear": true
@@ -7883,8 +7915,8 @@ function getQuestContentByKey(questKey) {
 	"weapon_special_fall2021Healer": {
 	  "set": "fall2021FlameSummonerHealerSet",
 	  "event": {
-		"start": "2021-09-21T08:00-04:00",
-		"end": "2021-10-31T20:00-04:00",
+		"start": "2023-09-21T08:00-04:00",
+		"end": "2023-10-31T23:59-04:00",
 		"npcImageSuffix": "_fall",
 		"season": "fall",
 		"gear": true
@@ -8182,8 +8214,8 @@ function getQuestContentByKey(questKey) {
 	"weapon_special_fall2022Rogue": {
 	  "set": "fall2022KappaRogueSet",
 	  "event": {
-		"start": "2022-09-20T08:00-04:00",
-		"end": "2022-10-31T20:00-04:00",
+		"start": "2023-09-21T08:00-04:00",
+		"end": "2023-10-31T23:59-04:00",
 		"npcImageSuffix": "_fall",
 		"season": "fall",
 		"gear": true
@@ -8205,8 +8237,8 @@ function getQuestContentByKey(questKey) {
 	"weapon_special_fall2022Warrior": {
 	  "set": "fall2022OrcWarriorSet",
 	  "event": {
-		"start": "2022-09-20T08:00-04:00",
-		"end": "2022-10-31T20:00-04:00",
+		"start": "2023-09-21T08:00-04:00",
+		"end": "2023-10-31T23:59-04:00",
 		"npcImageSuffix": "_fall",
 		"season": "fall",
 		"gear": true
@@ -8228,8 +8260,8 @@ function getQuestContentByKey(questKey) {
 	"weapon_special_fall2022Mage": {
 	  "set": "fall2022HarpyMageSet",
 	  "event": {
-		"start": "2022-09-20T08:00-04:00",
-		"end": "2022-10-31T20:00-04:00",
+		"start": "2023-09-21T08:00-04:00",
+		"end": "2023-10-31T23:59-04:00",
 		"npcImageSuffix": "_fall",
 		"season": "fall",
 		"gear": true
@@ -8251,8 +8283,8 @@ function getQuestContentByKey(questKey) {
 	"weapon_special_fall2022Healer": {
 	  "set": "fall2022WatcherHealerSet",
 	  "event": {
-		"start": "2022-09-20T08:00-04:00",
-		"end": "2022-10-31T20:00-04:00",
+		"start": "2023-09-21T08:00-04:00",
+		"end": "2023-10-31T23:59-04:00",
 		"npcImageSuffix": "_fall",
 		"season": "fall",
 		"gear": true
@@ -8458,10 +8490,10 @@ function getQuestContentByKey(questKey) {
 	"weapon_special_summer2023Rogue": {
 	  "set": "summer2023GuppyRogueSet",
 	  "event": {
-		"start": "2023-06-20T08:00-04:00",
-		"end": "2023-07-31T23:59-04:00",
-		"npcImageSuffix": "_summer",
-		"season": "summer",
+		"start": "2023-09-21T08:00-04:00",
+		"end": "2023-10-31T23:59-04:00",
+		"npcImageSuffix": "_fall",
+		"season": "fall",
 		"gear": true
 	  },
 	  "specialClass": "rogue",
@@ -8481,10 +8513,10 @@ function getQuestContentByKey(questKey) {
 	"weapon_special_summer2023Warrior": {
 	  "set": "summer2023GoldfishWarriorSet",
 	  "event": {
-		"start": "2023-06-20T08:00-04:00",
-		"end": "2023-07-31T23:59-04:00",
-		"npcImageSuffix": "_summer",
-		"season": "summer",
+		"start": "2023-09-21T08:00-04:00",
+		"end": "2023-10-31T23:59-04:00",
+		"npcImageSuffix": "_fall",
+		"season": "fall",
 		"gear": true
 	  },
 	  "specialClass": "warrior",
@@ -8504,10 +8536,10 @@ function getQuestContentByKey(questKey) {
 	"weapon_special_summer2023Mage": {
 	  "set": "summer2023CoralMageSet",
 	  "event": {
-		"start": "2023-06-20T08:00-04:00",
-		"end": "2023-07-31T23:59-04:00",
-		"npcImageSuffix": "_summer",
-		"season": "summer",
+		"start": "2023-09-21T08:00-04:00",
+		"end": "2023-10-31T23:59-04:00",
+		"npcImageSuffix": "_fall",
+		"season": "fall",
 		"gear": true
 	  },
 	  "specialClass": "wizard",
@@ -8527,10 +8559,10 @@ function getQuestContentByKey(questKey) {
 	"weapon_special_summer2023Healer": {
 	  "set": "summer2023KelpHealerSet",
 	  "event": {
-		"start": "2023-06-20T08:00-04:00",
-		"end": "2023-07-31T23:59-04:00",
-		"npcImageSuffix": "_summer",
-		"season": "summer",
+		"start": "2023-09-21T08:00-04:00",
+		"end": "2023-10-31T23:59-04:00",
+		"npcImageSuffix": "_fall",
+		"season": "fall",
 		"gear": true
 	  },
 	  "specialClass": "healer",
@@ -10235,148 +10267,6 @@ function getQuestContentByKey(questKey) {
 	  "int": 0,
 	  "per": 0
 	},
-	"armor_warrior_1": {
-	  "text": "Leather Armor",
-	  "notes": "Jerkin of sturdy boiled hide. Increases Constitution by 3.",
-	  "con": 3,
-	  "value": 30,
-	  "type": "armor",
-	  "key": "armor_warrior_1",
-	  "set": "warrior-1",
-	  "klass": "warrior",
-	  "index": "1",
-	  "str": 0,
-	  "int": 0,
-	  "per": 0
-	},
-	"armor_warrior_2": {
-	  "text": "Chain Mail",
-	  "notes": "Armor of interlocked metal rings. Increases Constitution by 5.",
-	  "con": 5,
-	  "value": 45,
-	  "type": "armor",
-	  "key": "armor_warrior_2",
-	  "set": "warrior-2",
-	  "klass": "warrior",
-	  "index": "2",
-	  "str": 0,
-	  "int": 0,
-	  "per": 0
-	},
-	"armor_warrior_3": {
-	  "text": "Plate Armor",
-	  "notes": "Suit of all-encasing steel, the pride of knights. Increases Constitution by 7.",
-	  "con": 7,
-	  "value": 65,
-	  "type": "armor",
-	  "key": "armor_warrior_3",
-	  "set": "warrior-3",
-	  "klass": "warrior",
-	  "index": "3",
-	  "str": 0,
-	  "int": 0,
-	  "per": 0
-	},
-	"armor_warrior_4": {
-	  "text": "Red Armor",
-	  "notes": "Heavy plate glowing with defensive enchantments. Increases Constitution by 9.",
-	  "con": 9,
-	  "value": 90,
-	  "type": "armor",
-	  "key": "armor_warrior_4",
-	  "set": "warrior-4",
-	  "klass": "warrior",
-	  "index": "4",
-	  "str": 0,
-	  "int": 0,
-	  "per": 0
-	},
-	"armor_warrior_5": {
-	  "text": "Golden Armor",
-	  "notes": "Looks ceremonial, but no known blade can pierce it. Increases Constitution by 11.",
-	  "con": 11,
-	  "value": 120,
-	  "last": true,
-	  "type": "armor",
-	  "key": "armor_warrior_5",
-	  "set": "warrior-5",
-	  "klass": "warrior",
-	  "index": "5",
-	  "str": 0,
-	  "int": 0,
-	  "per": 0
-	},
-	"armor_rogue_1": {
-	  "text": "Oiled Leather",
-	  "notes": "Leather armor treated to reduce noise. Increases Perception by 6.",
-	  "per": 6,
-	  "value": 30,
-	  "type": "armor",
-	  "key": "armor_rogue_1",
-	  "set": "rogue-1",
-	  "klass": "rogue",
-	  "index": "1",
-	  "str": 0,
-	  "int": 0,
-	  "con": 0
-	},
-	"armor_rogue_2": {
-	  "text": "Black Leather",
-	  "notes": "Colored with dark dye to blend into shadows. Increases Perception by 9.",
-	  "per": 9,
-	  "value": 45,
-	  "type": "armor",
-	  "key": "armor_rogue_2",
-	  "set": "rogue-2",
-	  "klass": "rogue",
-	  "index": "2",
-	  "str": 0,
-	  "int": 0,
-	  "con": 0
-	},
-	"armor_rogue_3": {
-	  "text": "Camouflage Vest",
-	  "notes": "Equally discreet in dungeon or wilderness. Increases Perception by 12.",
-	  "per": 12,
-	  "value": 65,
-	  "type": "armor",
-	  "key": "armor_rogue_3",
-	  "set": "rogue-3",
-	  "klass": "rogue",
-	  "index": "3",
-	  "str": 0,
-	  "int": 0,
-	  "con": 0
-	},
-	"armor_rogue_4": {
-	  "text": "Penumbral Armor",
-	  "notes": "Wraps the wearer in a veil of twilight. Increases Perception by 15.",
-	  "per": 15,
-	  "value": 90,
-	  "type": "armor",
-	  "key": "armor_rogue_4",
-	  "set": "rogue-4",
-	  "klass": "rogue",
-	  "index": "4",
-	  "str": 0,
-	  "int": 0,
-	  "con": 0
-	},
-	"armor_rogue_5": {
-	  "text": "Umbral Armor",
-	  "notes": "Allows stealth in the open in broad daylight. Increases Perception by 18.",
-	  "per": 18,
-	  "value": 120,
-	  "last": true,
-	  "type": "armor",
-	  "key": "armor_rogue_5",
-	  "set": "rogue-5",
-	  "klass": "rogue",
-	  "index": "5",
-	  "str": 0,
-	  "int": 0,
-	  "con": 0
-	},
 	"armor_healer_1": {
 	  "text": "Acolyte Robe",
 	  "notes": "Garment showing humility and purpose. Increases Constitution by 6.",
@@ -10518,6 +10408,148 @@ function getQuestContentByKey(questKey) {
 	  "str": 0,
 	  "per": 0,
 	  "con": 0
+	},
+	"armor_rogue_1": {
+	  "text": "Oiled Leather",
+	  "notes": "Leather armor treated to reduce noise. Increases Perception by 6.",
+	  "per": 6,
+	  "value": 30,
+	  "type": "armor",
+	  "key": "armor_rogue_1",
+	  "set": "rogue-1",
+	  "klass": "rogue",
+	  "index": "1",
+	  "str": 0,
+	  "int": 0,
+	  "con": 0
+	},
+	"armor_rogue_2": {
+	  "text": "Black Leather",
+	  "notes": "Colored with dark dye to blend into shadows. Increases Perception by 9.",
+	  "per": 9,
+	  "value": 45,
+	  "type": "armor",
+	  "key": "armor_rogue_2",
+	  "set": "rogue-2",
+	  "klass": "rogue",
+	  "index": "2",
+	  "str": 0,
+	  "int": 0,
+	  "con": 0
+	},
+	"armor_rogue_3": {
+	  "text": "Camouflage Vest",
+	  "notes": "Equally discreet in dungeon or wilderness. Increases Perception by 12.",
+	  "per": 12,
+	  "value": 65,
+	  "type": "armor",
+	  "key": "armor_rogue_3",
+	  "set": "rogue-3",
+	  "klass": "rogue",
+	  "index": "3",
+	  "str": 0,
+	  "int": 0,
+	  "con": 0
+	},
+	"armor_rogue_4": {
+	  "text": "Penumbral Armor",
+	  "notes": "Wraps the wearer in a veil of twilight. Increases Perception by 15.",
+	  "per": 15,
+	  "value": 90,
+	  "type": "armor",
+	  "key": "armor_rogue_4",
+	  "set": "rogue-4",
+	  "klass": "rogue",
+	  "index": "4",
+	  "str": 0,
+	  "int": 0,
+	  "con": 0
+	},
+	"armor_rogue_5": {
+	  "text": "Umbral Armor",
+	  "notes": "Allows stealth in the open in broad daylight. Increases Perception by 18.",
+	  "per": 18,
+	  "value": 120,
+	  "last": true,
+	  "type": "armor",
+	  "key": "armor_rogue_5",
+	  "set": "rogue-5",
+	  "klass": "rogue",
+	  "index": "5",
+	  "str": 0,
+	  "int": 0,
+	  "con": 0
+	},
+	"armor_warrior_1": {
+	  "text": "Leather Armor",
+	  "notes": "Jerkin of sturdy boiled hide. Increases Constitution by 3.",
+	  "con": 3,
+	  "value": 30,
+	  "type": "armor",
+	  "key": "armor_warrior_1",
+	  "set": "warrior-1",
+	  "klass": "warrior",
+	  "index": "1",
+	  "str": 0,
+	  "int": 0,
+	  "per": 0
+	},
+	"armor_warrior_2": {
+	  "text": "Chain Mail",
+	  "notes": "Armor of interlocked metal rings. Increases Constitution by 5.",
+	  "con": 5,
+	  "value": 45,
+	  "type": "armor",
+	  "key": "armor_warrior_2",
+	  "set": "warrior-2",
+	  "klass": "warrior",
+	  "index": "2",
+	  "str": 0,
+	  "int": 0,
+	  "per": 0
+	},
+	"armor_warrior_3": {
+	  "text": "Plate Armor",
+	  "notes": "Suit of all-encasing steel, the pride of knights. Increases Constitution by 7.",
+	  "con": 7,
+	  "value": 65,
+	  "type": "armor",
+	  "key": "armor_warrior_3",
+	  "set": "warrior-3",
+	  "klass": "warrior",
+	  "index": "3",
+	  "str": 0,
+	  "int": 0,
+	  "per": 0
+	},
+	"armor_warrior_4": {
+	  "text": "Red Armor",
+	  "notes": "Heavy plate glowing with defensive enchantments. Increases Constitution by 9.",
+	  "con": 9,
+	  "value": 90,
+	  "type": "armor",
+	  "key": "armor_warrior_4",
+	  "set": "warrior-4",
+	  "klass": "warrior",
+	  "index": "4",
+	  "str": 0,
+	  "int": 0,
+	  "per": 0
+	},
+	"armor_warrior_5": {
+	  "text": "Golden Armor",
+	  "notes": "Looks ceremonial, but no known blade can pierce it. Increases Constitution by 11.",
+	  "con": 11,
+	  "value": 120,
+	  "last": true,
+	  "type": "armor",
+	  "key": "armor_warrior_5",
+	  "set": "warrior-5",
+	  "klass": "warrior",
+	  "index": "5",
+	  "str": 0,
+	  "int": 0,
+	  "per": 0
 	},
 	"armor_base_0": {
 	  "text": "Plain Clothing",
@@ -11026,8 +11058,10 @@ function getQuestContentByKey(questKey) {
 	"armor_special_fallRogue": {
 	  "set": "vampireSmiterSet",
 	  "event": {
-		"start": "2014-09-21",
-		"end": "2014-11-01",
+		"start": "2023-09-21T08:00-04:00",
+		"end": "2023-10-31T23:59-04:00",
+		"npcImageSuffix": "_fall",
+		"season": "fall",
 		"gear": true
 	  },
 	  "specialClass": "rogue",
@@ -11046,8 +11080,10 @@ function getQuestContentByKey(questKey) {
 	"armor_special_fallWarrior": {
 	  "set": "monsterOfScienceSet",
 	  "event": {
-		"start": "2014-09-21",
-		"end": "2014-11-01",
+		"start": "2023-09-21T08:00-04:00",
+		"end": "2023-10-31T23:59-04:00",
+		"npcImageSuffix": "_fall",
+		"season": "fall",
 		"gear": true
 	  },
 	  "specialClass": "warrior",
@@ -11066,8 +11102,10 @@ function getQuestContentByKey(questKey) {
 	"armor_special_fallMage": {
 	  "set": "witchyWizardSet",
 	  "event": {
-		"start": "2014-09-21",
-		"end": "2014-11-01",
+		"start": "2023-09-21T08:00-04:00",
+		"end": "2023-10-31T23:59-04:00",
+		"npcImageSuffix": "_fall",
+		"season": "fall",
 		"gear": true
 	  },
 	  "specialClass": "wizard",
@@ -11086,8 +11124,10 @@ function getQuestContentByKey(questKey) {
 	"armor_special_fallHealer": {
 	  "set": "mummyMedicSet",
 	  "event": {
-		"start": "2014-09-21",
-		"end": "2014-11-01",
+		"start": "2023-09-21T08:00-04:00",
+		"end": "2023-10-31T23:59-04:00",
+		"npcImageSuffix": "_fall",
+		"season": "fall",
 		"gear": true
 	  },
 	  "specialClass": "healer",
@@ -11360,8 +11400,10 @@ function getQuestContentByKey(questKey) {
 	"armor_special_fall2015Rogue": {
 	  "set": "battleRogueSet",
 	  "event": {
-		"start": "2015-09-21",
-		"end": "2015-11-01",
+		"start": "2023-09-21T08:00-04:00",
+		"end": "2023-10-31T23:59-04:00",
+		"npcImageSuffix": "_fall",
+		"season": "fall",
 		"gear": true
 	  },
 	  "specialClass": "rogue",
@@ -11380,8 +11422,10 @@ function getQuestContentByKey(questKey) {
 	"armor_special_fall2015Warrior": {
 	  "set": "scarecrowWarriorSet",
 	  "event": {
-		"start": "2015-09-21",
-		"end": "2015-11-01",
+		"start": "2023-09-21T08:00-04:00",
+		"end": "2023-10-31T23:59-04:00",
+		"npcImageSuffix": "_fall",
+		"season": "fall",
 		"gear": true
 	  },
 	  "specialClass": "warrior",
@@ -11400,8 +11444,10 @@ function getQuestContentByKey(questKey) {
 	"armor_special_fall2015Mage": {
 	  "set": "stitchWitchSet",
 	  "event": {
-		"start": "2015-09-21",
-		"end": "2015-11-01",
+		"start": "2023-09-21T08:00-04:00",
+		"end": "2023-10-31T23:59-04:00",
+		"npcImageSuffix": "_fall",
+		"season": "fall",
 		"gear": true
 	  },
 	  "specialClass": "wizard",
@@ -11420,8 +11466,10 @@ function getQuestContentByKey(questKey) {
 	"armor_special_fall2015Healer": {
 	  "set": "potionerSet",
 	  "event": {
-		"start": "2015-09-21",
-		"end": "2015-11-01",
+		"start": "2023-09-21T08:00-04:00",
+		"end": "2023-10-31T23:59-04:00",
+		"npcImageSuffix": "_fall",
+		"season": "fall",
 		"gear": true
 	  },
 	  "specialClass": "healer",
@@ -11712,8 +11760,10 @@ function getQuestContentByKey(questKey) {
 	"armor_special_fall2016Rogue": {
 	  "set": "fall2016BlackWidowSet",
 	  "event": {
-		"start": "2016-09-20",
-		"end": "2016-11-02",
+		"start": "2023-09-21T08:00-04:00",
+		"end": "2023-10-31T23:59-04:00",
+		"npcImageSuffix": "_fall",
+		"season": "fall",
 		"gear": true
 	  },
 	  "specialClass": "rogue",
@@ -11732,8 +11782,10 @@ function getQuestContentByKey(questKey) {
 	"armor_special_fall2016Warrior": {
 	  "set": "fall2016SwampThingSet",
 	  "event": {
-		"start": "2016-09-20",
-		"end": "2016-11-02",
+		"start": "2023-09-21T08:00-04:00",
+		"end": "2023-10-31T23:59-04:00",
+		"npcImageSuffix": "_fall",
+		"season": "fall",
 		"gear": true
 	  },
 	  "specialClass": "warrior",
@@ -11752,8 +11804,10 @@ function getQuestContentByKey(questKey) {
 	"armor_special_fall2016Mage": {
 	  "set": "fall2016WickedSorcererSet",
 	  "event": {
-		"start": "2016-09-20",
-		"end": "2016-11-02",
+		"start": "2023-09-21T08:00-04:00",
+		"end": "2023-10-31T23:59-04:00",
+		"npcImageSuffix": "_fall",
+		"season": "fall",
 		"gear": true
 	  },
 	  "specialClass": "wizard",
@@ -11772,8 +11826,10 @@ function getQuestContentByKey(questKey) {
 	"armor_special_fall2016Healer": {
 	  "set": "fall2016GorgonHealerSet",
 	  "event": {
-		"start": "2016-09-20",
-		"end": "2016-11-02",
+		"start": "2023-09-21T08:00-04:00",
+		"end": "2023-10-31T23:59-04:00",
+		"npcImageSuffix": "_fall",
+		"season": "fall",
 		"gear": true
 	  },
 	  "specialClass": "healer",
@@ -12046,8 +12102,10 @@ function getQuestContentByKey(questKey) {
 	"armor_special_fall2017Rogue": {
 	  "set": "fall2017TrickOrTreatSet",
 	  "event": {
-		"start": "2017-09-21",
-		"end": "2017-11-02",
+		"start": "2023-09-21T08:00-04:00",
+		"end": "2023-10-31T23:59-04:00",
+		"npcImageSuffix": "_fall",
+		"season": "fall",
 		"gear": true
 	  },
 	  "specialClass": "rogue",
@@ -12066,8 +12124,10 @@ function getQuestContentByKey(questKey) {
 	"armor_special_fall2017Warrior": {
 	  "set": "fall2017HabitoweenSet",
 	  "event": {
-		"start": "2017-09-21",
-		"end": "2017-11-02",
+		"start": "2023-09-21T08:00-04:00",
+		"end": "2023-10-31T23:59-04:00",
+		"npcImageSuffix": "_fall",
+		"season": "fall",
 		"gear": true
 	  },
 	  "specialClass": "warrior",
@@ -12086,8 +12146,10 @@ function getQuestContentByKey(questKey) {
 	"armor_special_fall2017Mage": {
 	  "set": "fall2017MasqueradeSet",
 	  "event": {
-		"start": "2017-09-21",
-		"end": "2017-11-02",
+		"start": "2023-09-21T08:00-04:00",
+		"end": "2023-10-31T23:59-04:00",
+		"npcImageSuffix": "_fall",
+		"season": "fall",
 		"gear": true
 	  },
 	  "specialClass": "wizard",
@@ -12106,8 +12168,10 @@ function getQuestContentByKey(questKey) {
 	"armor_special_fall2017Healer": {
 	  "set": "fall2017HauntedHouseSet",
 	  "event": {
-		"start": "2017-09-21",
-		"end": "2017-11-02",
+		"start": "2023-09-21T08:00-04:00",
+		"end": "2023-10-31T23:59-04:00",
+		"npcImageSuffix": "_fall",
+		"season": "fall",
 		"gear": true
 	  },
 	  "specialClass": "healer",
@@ -12380,8 +12444,10 @@ function getQuestContentByKey(questKey) {
 	"armor_special_fall2018Rogue": {
 	  "set": "fall2018AlterEgoSet",
 	  "event": {
-		"start": "2018-09-20",
-		"end": "2018-11-02",
+		"start": "2023-09-21T08:00-04:00",
+		"end": "2023-10-31T23:59-04:00",
+		"npcImageSuffix": "_fall",
+		"season": "fall",
 		"gear": true
 	  },
 	  "specialClass": "rogue",
@@ -12400,8 +12466,10 @@ function getQuestContentByKey(questKey) {
 	"armor_special_fall2018Warrior": {
 	  "set": "fall2018MinotaurWarriorSet",
 	  "event": {
-		"start": "2018-09-20",
-		"end": "2018-11-02",
+		"start": "2023-09-21T08:00-04:00",
+		"end": "2023-10-31T23:59-04:00",
+		"npcImageSuffix": "_fall",
+		"season": "fall",
 		"gear": true
 	  },
 	  "specialClass": "warrior",
@@ -12420,8 +12488,10 @@ function getQuestContentByKey(questKey) {
 	"armor_special_fall2018Mage": {
 	  "set": "fall2018CandymancerMageSet",
 	  "event": {
-		"start": "2018-09-20",
-		"end": "2018-11-02",
+		"start": "2023-09-21T08:00-04:00",
+		"end": "2023-10-31T23:59-04:00",
+		"npcImageSuffix": "_fall",
+		"season": "fall",
 		"gear": true
 	  },
 	  "specialClass": "wizard",
@@ -12440,8 +12510,10 @@ function getQuestContentByKey(questKey) {
 	"armor_special_fall2018Healer": {
 	  "set": "fall2018CarnivorousPlantSet",
 	  "event": {
-		"start": "2018-09-20",
-		"end": "2018-11-02",
+		"start": "2023-09-21T08:00-04:00",
+		"end": "2023-10-31T23:59-04:00",
+		"npcImageSuffix": "_fall",
+		"season": "fall",
 		"gear": true
 	  },
 	  "specialClass": "healer",
@@ -12728,8 +12800,10 @@ function getQuestContentByKey(questKey) {
 	"armor_special_fall2019Rogue": {
 	  "set": "fall2019OperaticSpecterSet",
 	  "event": {
-		"start": "2019-09-24",
-		"end": "2019-11-02",
+		"start": "2023-09-21T08:00-04:00",
+		"end": "2023-10-31T23:59-04:00",
+		"npcImageSuffix": "_fall",
+		"season": "fall",
 		"gear": true
 	  },
 	  "specialClass": "rogue",
@@ -12748,8 +12822,10 @@ function getQuestContentByKey(questKey) {
 	"armor_special_fall2019Warrior": {
 	  "set": "fall2019RavenSet",
 	  "event": {
-		"start": "2019-09-24",
-		"end": "2019-11-02",
+		"start": "2023-09-21T08:00-04:00",
+		"end": "2023-10-31T23:59-04:00",
+		"npcImageSuffix": "_fall",
+		"season": "fall",
 		"gear": true
 	  },
 	  "specialClass": "warrior",
@@ -12768,8 +12844,10 @@ function getQuestContentByKey(questKey) {
 	"armor_special_fall2019Mage": {
 	  "set": "fall2019CyclopsSet",
 	  "event": {
-		"start": "2019-09-24",
-		"end": "2019-11-02",
+		"start": "2023-09-21T08:00-04:00",
+		"end": "2023-10-31T23:59-04:00",
+		"npcImageSuffix": "_fall",
+		"season": "fall",
 		"gear": true
 	  },
 	  "specialClass": "wizard",
@@ -12788,8 +12866,10 @@ function getQuestContentByKey(questKey) {
 	"armor_special_fall2019Healer": {
 	  "set": "fall2019LichSet",
 	  "event": {
-		"start": "2019-09-24",
-		"end": "2019-11-02",
+		"start": "2023-09-21T08:00-04:00",
+		"end": "2023-10-31T23:59-04:00",
+		"npcImageSuffix": "_fall",
+		"season": "fall",
 		"gear": true
 	  },
 	  "specialClass": "healer",
@@ -13076,15 +13156,11 @@ function getQuestContentByKey(questKey) {
 	"armor_special_fall2020Rogue": {
 	  "set": "fall2020TwoHeadedRogueSet",
 	  "event": {
-		"start": "2020-09-22T08:00-04:00",
-		"end": "2020-10-31T20:00-04:00",
-		"gear": true,
-		"gemsPromo": {
-		  "4gems": 5,
-		  "21gems": 30,
-		  "42gems": 60,
-		  "84gems": 125
-		}
+		"start": "2023-09-21T08:00-04:00",
+		"end": "2023-10-31T23:59-04:00",
+		"npcImageSuffix": "_fall",
+		"season": "fall",
+		"gear": true
 	  },
 	  "specialClass": "rogue",
 	  "text": "Statuesque Armor",
@@ -13102,15 +13178,11 @@ function getQuestContentByKey(questKey) {
 	"armor_special_fall2020Warrior": {
 	  "set": "fall2020WraithWarriorSet",
 	  "event": {
-		"start": "2020-09-22T08:00-04:00",
-		"end": "2020-10-31T20:00-04:00",
-		"gear": true,
-		"gemsPromo": {
-		  "4gems": 5,
-		  "21gems": 30,
-		  "42gems": 60,
-		  "84gems": 125
-		}
+		"start": "2023-09-21T08:00-04:00",
+		"end": "2023-10-31T23:59-04:00",
+		"npcImageSuffix": "_fall",
+		"season": "fall",
+		"gear": true
 	  },
 	  "specialClass": "warrior",
 	  "text": "Revenant's Robes",
@@ -13128,15 +13200,11 @@ function getQuestContentByKey(questKey) {
 	"armor_special_fall2020Mage": {
 	  "set": "fall2020ThirdEyeMageSet",
 	  "event": {
-		"start": "2020-09-22T08:00-04:00",
-		"end": "2020-10-31T20:00-04:00",
-		"gear": true,
-		"gemsPromo": {
-		  "4gems": 5,
-		  "21gems": 30,
-		  "42gems": 60,
-		  "84gems": 125
-		}
+		"start": "2023-09-21T08:00-04:00",
+		"end": "2023-10-31T23:59-04:00",
+		"npcImageSuffix": "_fall",
+		"season": "fall",
+		"gear": true
 	  },
 	  "specialClass": "wizard",
 	  "text": "Aloft Upon Enlightenment",
@@ -13154,15 +13222,11 @@ function getQuestContentByKey(questKey) {
 	"armor_special_fall2020Healer": {
 	  "set": "fall2020DeathsHeadMothHealerSet",
 	  "event": {
-		"start": "2020-09-22T08:00-04:00",
-		"end": "2020-10-31T20:00-04:00",
-		"gear": true,
-		"gemsPromo": {
-		  "4gems": 5,
-		  "21gems": 30,
-		  "42gems": 60,
-		  "84gems": 125
-		}
+		"start": "2023-09-21T08:00-04:00",
+		"end": "2023-10-31T23:59-04:00",
+		"npcImageSuffix": "_fall",
+		"season": "fall",
+		"gear": true
 	  },
 	  "specialClass": "healer",
 	  "text": "Hawkmoth Wings",
@@ -13458,8 +13522,8 @@ function getQuestContentByKey(questKey) {
 	"armor_special_fall2021Rogue": {
 	  "set": "fall2021OozeRogueSet",
 	  "event": {
-		"start": "2021-09-21T08:00-04:00",
-		"end": "2021-10-31T20:00-04:00",
+		"start": "2023-09-21T08:00-04:00",
+		"end": "2023-10-31T23:59-04:00",
 		"npcImageSuffix": "_fall",
 		"season": "fall",
 		"gear": true
@@ -13480,8 +13544,8 @@ function getQuestContentByKey(questKey) {
 	"armor_special_fall2021Warrior": {
 	  "set": "fall2021HeadlessWarriorSet",
 	  "event": {
-		"start": "2021-09-21T08:00-04:00",
-		"end": "2021-10-31T20:00-04:00",
+		"start": "2023-09-21T08:00-04:00",
+		"end": "2023-10-31T23:59-04:00",
 		"npcImageSuffix": "_fall",
 		"season": "fall",
 		"gear": true
@@ -13502,8 +13566,8 @@ function getQuestContentByKey(questKey) {
 	"armor_special_fall2021Mage": {
 	  "set": "fall2021BrainEaterMageSet",
 	  "event": {
-		"start": "2021-09-21T08:00-04:00",
-		"end": "2021-10-31T20:00-04:00",
+		"start": "2023-09-21T08:00-04:00",
+		"end": "2023-10-31T23:59-04:00",
 		"npcImageSuffix": "_fall",
 		"season": "fall",
 		"gear": true
@@ -13524,8 +13588,8 @@ function getQuestContentByKey(questKey) {
 	"armor_special_fall2021Healer": {
 	  "set": "fall2021FlameSummonerHealerSet",
 	  "event": {
-		"start": "2021-09-21T08:00-04:00",
-		"end": "2021-10-31T20:00-04:00",
+		"start": "2023-09-21T08:00-04:00",
+		"end": "2023-10-31T23:59-04:00",
 		"npcImageSuffix": "_fall",
 		"season": "fall",
 		"gear": true
@@ -13824,8 +13888,8 @@ function getQuestContentByKey(questKey) {
 	"armor_special_fall2022Rogue": {
 	  "set": "fall2022KappaRogueSet",
 	  "event": {
-		"start": "2022-09-20T08:00-04:00",
-		"end": "2022-10-31T20:00-04:00",
+		"start": "2023-09-21T08:00-04:00",
+		"end": "2023-10-31T23:59-04:00",
 		"npcImageSuffix": "_fall",
 		"season": "fall",
 		"gear": true
@@ -13846,8 +13910,8 @@ function getQuestContentByKey(questKey) {
 	"armor_special_fall2022Warrior": {
 	  "set": "fall2022OrcWarriorSet",
 	  "event": {
-		"start": "2022-09-20T08:00-04:00",
-		"end": "2022-10-31T20:00-04:00",
+		"start": "2023-09-21T08:00-04:00",
+		"end": "2023-10-31T23:59-04:00",
 		"npcImageSuffix": "_fall",
 		"season": "fall",
 		"gear": true
@@ -13868,8 +13932,8 @@ function getQuestContentByKey(questKey) {
 	"armor_special_fall2022Mage": {
 	  "set": "fall2022HarpyMageSet",
 	  "event": {
-		"start": "2022-09-20T08:00-04:00",
-		"end": "2022-10-31T20:00-04:00",
+		"start": "2023-09-21T08:00-04:00",
+		"end": "2023-10-31T23:59-04:00",
 		"npcImageSuffix": "_fall",
 		"season": "fall",
 		"gear": true
@@ -13890,8 +13954,8 @@ function getQuestContentByKey(questKey) {
 	"armor_special_fall2022Healer": {
 	  "set": "fall2022WatcherHealerSet",
 	  "event": {
-		"start": "2022-09-20T08:00-04:00",
-		"end": "2022-10-31T20:00-04:00",
+		"start": "2023-09-21T08:00-04:00",
+		"end": "2023-10-31T23:59-04:00",
 		"npcImageSuffix": "_fall",
 		"season": "fall",
 		"gear": true
@@ -15170,6 +15234,21 @@ function getQuestContentByKey(questKey) {
 	  "set": "mystery-202307",
 	  "klass": "mystery",
 	  "index": "202307",
+	  "str": 0,
+	  "int": 0,
+	  "per": 0,
+	  "con": 0
+	},
+	"armor_mystery_202310": {
+	  "text": "Wraith's Robe",
+	  "notes": "A ghostly garment that will curl and drift gracefully as you float amidst the haunted bogs and wastes. Confers no benefit. October 2023 Subscriber Item.",
+	  "mystery": "202310",
+	  "value": 0,
+	  "type": "armor",
+	  "key": "armor_mystery_202310",
+	  "set": "mystery-202310",
+	  "klass": "mystery",
+	  "index": "202310",
 	  "str": 0,
 	  "int": 0,
 	  "per": 0,
@@ -16550,148 +16629,6 @@ function getQuestContentByKey(questKey) {
 	  "per": 0,
 	  "con": 0
 	},
-	"head_warrior_1": {
-	  "text": "Leather Helm",
-	  "notes": "Cap of sturdy boiled hide. Increases Strength by 2.",
-	  "str": 2,
-	  "value": 15,
-	  "type": "head",
-	  "key": "head_warrior_1",
-	  "set": "warrior-1",
-	  "klass": "warrior",
-	  "index": "1",
-	  "int": 0,
-	  "per": 0,
-	  "con": 0
-	},
-	"head_warrior_2": {
-	  "text": "Chain Coif",
-	  "notes": "Hood of interlocked metal rings. Increases Strength by 4.",
-	  "str": 4,
-	  "value": 25,
-	  "type": "head",
-	  "key": "head_warrior_2",
-	  "set": "warrior-2",
-	  "klass": "warrior",
-	  "index": "2",
-	  "int": 0,
-	  "per": 0,
-	  "con": 0
-	},
-	"head_warrior_3": {
-	  "text": "Plate Helm",
-	  "notes": "Thick steel helmet, proof against any blow. Increases Strength by 6.",
-	  "str": 6,
-	  "value": 40,
-	  "type": "head",
-	  "key": "head_warrior_3",
-	  "set": "warrior-3",
-	  "klass": "warrior",
-	  "index": "3",
-	  "int": 0,
-	  "per": 0,
-	  "con": 0
-	},
-	"head_warrior_4": {
-	  "text": "Red Helm",
-	  "notes": "Set with rubies for power, and glows when the wearer is angered. Increases Strength by 9.",
-	  "str": 9,
-	  "value": 60,
-	  "type": "head",
-	  "key": "head_warrior_4",
-	  "set": "warrior-4",
-	  "klass": "warrior",
-	  "index": "4",
-	  "int": 0,
-	  "per": 0,
-	  "con": 0
-	},
-	"head_warrior_5": {
-	  "text": "Golden Helm",
-	  "notes": "Regal crown bound to shining armor. Increases Strength by 12.",
-	  "str": 12,
-	  "value": 80,
-	  "last": true,
-	  "type": "head",
-	  "key": "head_warrior_5",
-	  "set": "warrior-5",
-	  "klass": "warrior",
-	  "index": "5",
-	  "int": 0,
-	  "per": 0,
-	  "con": 0
-	},
-	"head_rogue_1": {
-	  "text": "Leather Hood",
-	  "notes": "Basic protective cowl. Increases Perception by 2.",
-	  "per": 2,
-	  "value": 15,
-	  "type": "head",
-	  "key": "head_rogue_1",
-	  "set": "rogue-1",
-	  "klass": "rogue",
-	  "index": "1",
-	  "str": 0,
-	  "int": 0,
-	  "con": 0
-	},
-	"head_rogue_2": {
-	  "text": "Black Leather Hood",
-	  "notes": "Useful for both defense and disguise. Increases Perception by 4.",
-	  "per": 4,
-	  "value": 25,
-	  "type": "head",
-	  "key": "head_rogue_2",
-	  "set": "rogue-2",
-	  "klass": "rogue",
-	  "index": "2",
-	  "str": 0,
-	  "int": 0,
-	  "con": 0
-	},
-	"head_rogue_3": {
-	  "text": "Camouflage Hood",
-	  "notes": "Rugged, but doesn't impede hearing. Increases Perception by 6.",
-	  "per": 6,
-	  "value": 40,
-	  "type": "head",
-	  "key": "head_rogue_3",
-	  "set": "rogue-3",
-	  "klass": "rogue",
-	  "index": "3",
-	  "str": 0,
-	  "int": 0,
-	  "con": 0
-	},
-	"head_rogue_4": {
-	  "text": "Penumbral Hood",
-	  "notes": "Grants perfect vision in darkness. Increases Perception by 9.",
-	  "per": 9,
-	  "value": 60,
-	  "type": "head",
-	  "key": "head_rogue_4",
-	  "set": "rogue-4",
-	  "klass": "rogue",
-	  "index": "4",
-	  "str": 0,
-	  "int": 0,
-	  "con": 0
-	},
-	"head_rogue_5": {
-	  "text": "Umbral Hood",
-	  "notes": "Conceals even thoughts from those who would probe them. Increases Perception by 12.",
-	  "per": 12,
-	  "value": 80,
-	  "last": true,
-	  "type": "head",
-	  "key": "head_rogue_5",
-	  "set": "rogue-5",
-	  "klass": "rogue",
-	  "index": "5",
-	  "str": 0,
-	  "int": 0,
-	  "con": 0
-	},
 	"head_healer_1": {
 	  "text": "Quartz Circlet",
 	  "notes": "Jeweled headpiece, for focus on the task at hand. Increases Intelligence by 2.",
@@ -16832,6 +16769,148 @@ function getQuestContentByKey(questKey) {
 	  "index": "5",
 	  "str": 0,
 	  "int": 0,
+	  "con": 0
+	},
+	"head_rogue_1": {
+	  "text": "Leather Hood",
+	  "notes": "Basic protective cowl. Increases Perception by 2.",
+	  "per": 2,
+	  "value": 15,
+	  "type": "head",
+	  "key": "head_rogue_1",
+	  "set": "rogue-1",
+	  "klass": "rogue",
+	  "index": "1",
+	  "str": 0,
+	  "int": 0,
+	  "con": 0
+	},
+	"head_rogue_2": {
+	  "text": "Black Leather Hood",
+	  "notes": "Useful for both defense and disguise. Increases Perception by 4.",
+	  "per": 4,
+	  "value": 25,
+	  "type": "head",
+	  "key": "head_rogue_2",
+	  "set": "rogue-2",
+	  "klass": "rogue",
+	  "index": "2",
+	  "str": 0,
+	  "int": 0,
+	  "con": 0
+	},
+	"head_rogue_3": {
+	  "text": "Camouflage Hood",
+	  "notes": "Rugged, but doesn't impede hearing. Increases Perception by 6.",
+	  "per": 6,
+	  "value": 40,
+	  "type": "head",
+	  "key": "head_rogue_3",
+	  "set": "rogue-3",
+	  "klass": "rogue",
+	  "index": "3",
+	  "str": 0,
+	  "int": 0,
+	  "con": 0
+	},
+	"head_rogue_4": {
+	  "text": "Penumbral Hood",
+	  "notes": "Grants perfect vision in darkness. Increases Perception by 9.",
+	  "per": 9,
+	  "value": 60,
+	  "type": "head",
+	  "key": "head_rogue_4",
+	  "set": "rogue-4",
+	  "klass": "rogue",
+	  "index": "4",
+	  "str": 0,
+	  "int": 0,
+	  "con": 0
+	},
+	"head_rogue_5": {
+	  "text": "Umbral Hood",
+	  "notes": "Conceals even thoughts from those who would probe them. Increases Perception by 12.",
+	  "per": 12,
+	  "value": 80,
+	  "last": true,
+	  "type": "head",
+	  "key": "head_rogue_5",
+	  "set": "rogue-5",
+	  "klass": "rogue",
+	  "index": "5",
+	  "str": 0,
+	  "int": 0,
+	  "con": 0
+	},
+	"head_warrior_1": {
+	  "text": "Leather Helm",
+	  "notes": "Cap of sturdy boiled hide. Increases Strength by 2.",
+	  "str": 2,
+	  "value": 15,
+	  "type": "head",
+	  "key": "head_warrior_1",
+	  "set": "warrior-1",
+	  "klass": "warrior",
+	  "index": "1",
+	  "int": 0,
+	  "per": 0,
+	  "con": 0
+	},
+	"head_warrior_2": {
+	  "text": "Chain Coif",
+	  "notes": "Hood of interlocked metal rings. Increases Strength by 4.",
+	  "str": 4,
+	  "value": 25,
+	  "type": "head",
+	  "key": "head_warrior_2",
+	  "set": "warrior-2",
+	  "klass": "warrior",
+	  "index": "2",
+	  "int": 0,
+	  "per": 0,
+	  "con": 0
+	},
+	"head_warrior_3": {
+	  "text": "Plate Helm",
+	  "notes": "Thick steel helmet, proof against any blow. Increases Strength by 6.",
+	  "str": 6,
+	  "value": 40,
+	  "type": "head",
+	  "key": "head_warrior_3",
+	  "set": "warrior-3",
+	  "klass": "warrior",
+	  "index": "3",
+	  "int": 0,
+	  "per": 0,
+	  "con": 0
+	},
+	"head_warrior_4": {
+	  "text": "Red Helm",
+	  "notes": "Set with rubies for power, and glows when the wearer is angered. Increases Strength by 9.",
+	  "str": 9,
+	  "value": 60,
+	  "type": "head",
+	  "key": "head_warrior_4",
+	  "set": "warrior-4",
+	  "klass": "warrior",
+	  "index": "4",
+	  "int": 0,
+	  "per": 0,
+	  "con": 0
+	},
+	"head_warrior_5": {
+	  "text": "Golden Helm",
+	  "notes": "Regal crown bound to shining armor. Increases Strength by 12.",
+	  "str": 12,
+	  "value": 80,
+	  "last": true,
+	  "type": "head",
+	  "key": "head_warrior_5",
+	  "set": "warrior-5",
+	  "klass": "warrior",
+	  "index": "5",
+	  "int": 0,
+	  "per": 0,
 	  "con": 0
 	},
 	"head_base_0": {
@@ -17323,8 +17402,10 @@ function getQuestContentByKey(questKey) {
 	"head_special_fallRogue": {
 	  "set": "vampireSmiterSet",
 	  "event": {
-		"start": "2014-09-21",
-		"end": "2014-11-01",
+		"start": "2023-09-21T08:00-04:00",
+		"end": "2023-10-31T23:59-04:00",
+		"npcImageSuffix": "_fall",
+		"season": "fall",
 		"gear": true
 	  },
 	  "specialClass": "rogue",
@@ -17343,8 +17424,10 @@ function getQuestContentByKey(questKey) {
 	"head_special_fallWarrior": {
 	  "set": "monsterOfScienceSet",
 	  "event": {
-		"start": "2014-09-21",
-		"end": "2014-11-01",
+		"start": "2023-09-21T08:00-04:00",
+		"end": "2023-10-31T23:59-04:00",
+		"npcImageSuffix": "_fall",
+		"season": "fall",
 		"gear": true
 	  },
 	  "specialClass": "warrior",
@@ -17363,8 +17446,10 @@ function getQuestContentByKey(questKey) {
 	"head_special_fallMage": {
 	  "set": "witchyWizardSet",
 	  "event": {
-		"start": "2014-09-21",
-		"end": "2014-11-01",
+		"start": "2023-09-21T08:00-04:00",
+		"end": "2023-10-31T23:59-04:00",
+		"npcImageSuffix": "_fall",
+		"season": "fall",
 		"gear": true
 	  },
 	  "specialClass": "wizard",
@@ -17383,8 +17468,10 @@ function getQuestContentByKey(questKey) {
 	"head_special_fallHealer": {
 	  "set": "mummyMedicSet",
 	  "event": {
-		"start": "2014-09-21",
-		"end": "2014-11-01",
+		"start": "2023-09-21T08:00-04:00",
+		"end": "2023-10-31T23:59-04:00",
+		"npcImageSuffix": "_fall",
+		"season": "fall",
 		"gear": true
 	  },
 	  "specialClass": "healer",
@@ -17657,8 +17744,10 @@ function getQuestContentByKey(questKey) {
 	"head_special_fall2015Rogue": {
 	  "set": "battleRogueSet",
 	  "event": {
-		"start": "2015-09-21",
-		"end": "2015-11-01",
+		"start": "2023-09-21T08:00-04:00",
+		"end": "2023-10-31T23:59-04:00",
+		"npcImageSuffix": "_fall",
+		"season": "fall",
 		"gear": true
 	  },
 	  "specialClass": "rogue",
@@ -17677,8 +17766,10 @@ function getQuestContentByKey(questKey) {
 	"head_special_fall2015Warrior": {
 	  "set": "scarecrowWarriorSet",
 	  "event": {
-		"start": "2015-09-21",
-		"end": "2015-11-01",
+		"start": "2023-09-21T08:00-04:00",
+		"end": "2023-10-31T23:59-04:00",
+		"npcImageSuffix": "_fall",
+		"season": "fall",
 		"gear": true
 	  },
 	  "specialClass": "warrior",
@@ -17697,8 +17788,10 @@ function getQuestContentByKey(questKey) {
 	"head_special_fall2015Mage": {
 	  "set": "stitchWitchSet",
 	  "event": {
-		"start": "2015-09-21",
-		"end": "2015-11-01",
+		"start": "2023-09-21T08:00-04:00",
+		"end": "2023-10-31T23:59-04:00",
+		"npcImageSuffix": "_fall",
+		"season": "fall",
 		"gear": true
 	  },
 	  "specialClass": "wizard",
@@ -17717,8 +17810,10 @@ function getQuestContentByKey(questKey) {
 	"head_special_fall2015Healer": {
 	  "set": "potionerSet",
 	  "event": {
-		"start": "2015-09-21",
-		"end": "2015-11-01",
+		"start": "2023-09-21T08:00-04:00",
+		"end": "2023-10-31T23:59-04:00",
+		"npcImageSuffix": "_fall",
+		"season": "fall",
 		"gear": true
 	  },
 	  "specialClass": "healer",
@@ -18009,8 +18104,10 @@ function getQuestContentByKey(questKey) {
 	"head_special_fall2016Rogue": {
 	  "set": "fall2016BlackWidowSet",
 	  "event": {
-		"start": "2016-09-20",
-		"end": "2016-11-02",
+		"start": "2023-09-21T08:00-04:00",
+		"end": "2023-10-31T23:59-04:00",
+		"npcImageSuffix": "_fall",
+		"season": "fall",
 		"gear": true
 	  },
 	  "specialClass": "rogue",
@@ -18029,8 +18126,10 @@ function getQuestContentByKey(questKey) {
 	"head_special_fall2016Warrior": {
 	  "set": "fall2016SwampThingSet",
 	  "event": {
-		"start": "2016-09-20",
-		"end": "2016-11-02",
+		"start": "2023-09-21T08:00-04:00",
+		"end": "2023-10-31T23:59-04:00",
+		"npcImageSuffix": "_fall",
+		"season": "fall",
 		"gear": true
 	  },
 	  "specialClass": "warrior",
@@ -18049,8 +18148,10 @@ function getQuestContentByKey(questKey) {
 	"head_special_fall2016Mage": {
 	  "set": "fall2016WickedSorcererSet",
 	  "event": {
-		"start": "2016-09-20",
-		"end": "2016-11-02",
+		"start": "2023-09-21T08:00-04:00",
+		"end": "2023-10-31T23:59-04:00",
+		"npcImageSuffix": "_fall",
+		"season": "fall",
 		"gear": true
 	  },
 	  "specialClass": "wizard",
@@ -18069,8 +18170,10 @@ function getQuestContentByKey(questKey) {
 	"head_special_fall2016Healer": {
 	  "set": "fall2016GorgonHealerSet",
 	  "event": {
-		"start": "2016-09-20",
-		"end": "2016-11-02",
+		"start": "2023-09-21T08:00-04:00",
+		"end": "2023-10-31T23:59-04:00",
+		"npcImageSuffix": "_fall",
+		"season": "fall",
 		"gear": true
 	  },
 	  "specialClass": "healer",
@@ -18357,8 +18460,10 @@ function getQuestContentByKey(questKey) {
 	"head_special_fall2017Rogue": {
 	  "set": "fall2017TrickOrTreatSet",
 	  "event": {
-		"start": "2017-09-21",
-		"end": "2017-11-02",
+		"start": "2023-09-21T08:00-04:00",
+		"end": "2023-10-31T23:59-04:00",
+		"npcImageSuffix": "_fall",
+		"season": "fall",
 		"gear": true
 	  },
 	  "specialClass": "rogue",
@@ -18377,8 +18482,10 @@ function getQuestContentByKey(questKey) {
 	"head_special_fall2017Warrior": {
 	  "set": "fall2017HabitoweenSet",
 	  "event": {
-		"start": "2017-09-21",
-		"end": "2017-11-02",
+		"start": "2023-09-21T08:00-04:00",
+		"end": "2023-10-31T23:59-04:00",
+		"npcImageSuffix": "_fall",
+		"season": "fall",
 		"gear": true
 	  },
 	  "specialClass": "warrior",
@@ -18397,8 +18504,10 @@ function getQuestContentByKey(questKey) {
 	"head_special_fall2017Mage": {
 	  "set": "fall2017MasqueradeSet",
 	  "event": {
-		"start": "2017-09-21",
-		"end": "2017-11-02",
+		"start": "2023-09-21T08:00-04:00",
+		"end": "2023-10-31T23:59-04:00",
+		"npcImageSuffix": "_fall",
+		"season": "fall",
 		"gear": true
 	  },
 	  "specialClass": "wizard",
@@ -18417,8 +18526,10 @@ function getQuestContentByKey(questKey) {
 	"head_special_fall2017Healer": {
 	  "set": "fall2017HauntedHouseSet",
 	  "event": {
-		"start": "2017-09-21",
-		"end": "2017-11-02",
+		"start": "2023-09-21T08:00-04:00",
+		"end": "2023-10-31T23:59-04:00",
+		"npcImageSuffix": "_fall",
+		"season": "fall",
 		"gear": true
 	  },
 	  "specialClass": "healer",
@@ -18691,8 +18802,10 @@ function getQuestContentByKey(questKey) {
 	"head_special_fall2018Rogue": {
 	  "set": "fall2018AlterEgoSet",
 	  "event": {
-		"start": "2018-09-20",
-		"end": "2018-11-02",
+		"start": "2023-09-21T08:00-04:00",
+		"end": "2023-10-31T23:59-04:00",
+		"npcImageSuffix": "_fall",
+		"season": "fall",
 		"gear": true
 	  },
 	  "specialClass": "rogue",
@@ -18711,8 +18824,10 @@ function getQuestContentByKey(questKey) {
 	"head_special_fall2018Warrior": {
 	  "set": "fall2018MinotaurWarriorSet",
 	  "event": {
-		"start": "2018-09-20",
-		"end": "2018-11-02",
+		"start": "2023-09-21T08:00-04:00",
+		"end": "2023-10-31T23:59-04:00",
+		"npcImageSuffix": "_fall",
+		"season": "fall",
 		"gear": true
 	  },
 	  "specialClass": "warrior",
@@ -18731,8 +18846,10 @@ function getQuestContentByKey(questKey) {
 	"head_special_fall2018Mage": {
 	  "set": "fall2018CandymancerMageSet",
 	  "event": {
-		"start": "2018-09-20",
-		"end": "2018-11-02",
+		"start": "2023-09-21T08:00-04:00",
+		"end": "2023-10-31T23:59-04:00",
+		"npcImageSuffix": "_fall",
+		"season": "fall",
 		"gear": true
 	  },
 	  "specialClass": "wizard",
@@ -18751,8 +18868,10 @@ function getQuestContentByKey(questKey) {
 	"head_special_fall2018Healer": {
 	  "set": "fall2018CarnivorousPlantSet",
 	  "event": {
-		"start": "2018-09-20",
-		"end": "2018-11-02",
+		"start": "2023-09-21T08:00-04:00",
+		"end": "2023-10-31T23:59-04:00",
+		"npcImageSuffix": "_fall",
+		"season": "fall",
 		"gear": true
 	  },
 	  "specialClass": "healer",
@@ -19053,8 +19172,10 @@ function getQuestContentByKey(questKey) {
 	"head_special_fall2019Rogue": {
 	  "set": "fall2019OperaticSpecterSet",
 	  "event": {
-		"start": "2019-09-24",
-		"end": "2019-11-02",
+		"start": "2023-09-21T08:00-04:00",
+		"end": "2023-10-31T23:59-04:00",
+		"npcImageSuffix": "_fall",
+		"season": "fall",
 		"gear": true
 	  },
 	  "specialClass": "rogue",
@@ -19073,8 +19194,10 @@ function getQuestContentByKey(questKey) {
 	"head_special_fall2019Warrior": {
 	  "set": "fall2019RavenSet",
 	  "event": {
-		"start": "2019-09-24",
-		"end": "2019-11-02",
+		"start": "2023-09-21T08:00-04:00",
+		"end": "2023-10-31T23:59-04:00",
+		"npcImageSuffix": "_fall",
+		"season": "fall",
 		"gear": true
 	  },
 	  "specialClass": "warrior",
@@ -19093,8 +19216,10 @@ function getQuestContentByKey(questKey) {
 	"head_special_fall2019Mage": {
 	  "set": "fall2019CyclopsSet",
 	  "event": {
-		"start": "2019-09-24",
-		"end": "2019-11-02",
+		"start": "2023-09-21T08:00-04:00",
+		"end": "2023-10-31T23:59-04:00",
+		"npcImageSuffix": "_fall",
+		"season": "fall",
 		"gear": true
 	  },
 	  "specialClass": "wizard",
@@ -19113,8 +19238,10 @@ function getQuestContentByKey(questKey) {
 	"head_special_fall2019Healer": {
 	  "set": "fall2019LichSet",
 	  "event": {
-		"start": "2019-09-24",
-		"end": "2019-11-02",
+		"start": "2023-09-21T08:00-04:00",
+		"end": "2023-10-31T23:59-04:00",
+		"npcImageSuffix": "_fall",
+		"season": "fall",
 		"gear": true
 	  },
 	  "specialClass": "healer",
@@ -19401,15 +19528,11 @@ function getQuestContentByKey(questKey) {
 	"head_special_fall2020Rogue": {
 	  "set": "fall2020TwoHeadedRogueSet",
 	  "event": {
-		"start": "2020-09-22T08:00-04:00",
-		"end": "2020-10-31T20:00-04:00",
-		"gear": true,
-		"gemsPromo": {
-		  "4gems": 5,
-		  "21gems": 30,
-		  "42gems": 60,
-		  "84gems": 125
-		}
+		"start": "2023-09-21T08:00-04:00",
+		"end": "2023-10-31T23:59-04:00",
+		"npcImageSuffix": "_fall",
+		"season": "fall",
+		"gear": true
 	  },
 	  "specialClass": "rogue",
 	  "text": "Two-Headed Stone Mask",
@@ -19427,15 +19550,11 @@ function getQuestContentByKey(questKey) {
 	"head_special_fall2020Warrior": {
 	  "set": "fall2020WraithWarriorSet",
 	  "event": {
-		"start": "2020-09-22T08:00-04:00",
-		"end": "2020-10-31T20:00-04:00",
-		"gear": true,
-		"gemsPromo": {
-		  "4gems": 5,
-		  "21gems": 30,
-		  "42gems": 60,
-		  "84gems": 125
-		}
+		"start": "2023-09-21T08:00-04:00",
+		"end": "2023-10-31T23:59-04:00",
+		"npcImageSuffix": "_fall",
+		"season": "fall",
+		"gear": true
 	  },
 	  "specialClass": "warrior",
 	  "text": "Creepy Cowl",
@@ -19453,15 +19572,11 @@ function getQuestContentByKey(questKey) {
 	"head_special_fall2020Mage": {
 	  "set": "fall2020ThirdEyeMageSet",
 	  "event": {
-		"start": "2020-09-22T08:00-04:00",
-		"end": "2020-10-31T20:00-04:00",
-		"gear": true,
-		"gemsPromo": {
-		  "4gems": 5,
-		  "21gems": 30,
-		  "42gems": 60,
-		  "84gems": 125
-		}
+		"start": "2023-09-21T08:00-04:00",
+		"end": "2023-10-31T23:59-04:00",
+		"npcImageSuffix": "_fall",
+		"season": "fall",
+		"gear": true
 	  },
 	  "specialClass": "wizard",
 	  "text": "Awakened Clarity",
@@ -19479,15 +19594,11 @@ function getQuestContentByKey(questKey) {
 	"head_special_fall2020Healer": {
 	  "set": "fall2020DeathsHeadMothHealerSet",
 	  "event": {
-		"start": "2020-09-22T08:00-04:00",
-		"end": "2020-10-31T20:00-04:00",
-		"gear": true,
-		"gemsPromo": {
-		  "4gems": 5,
-		  "21gems": 30,
-		  "42gems": 60,
-		  "84gems": 125
-		}
+		"start": "2023-09-21T08:00-04:00",
+		"end": "2023-10-31T23:59-04:00",
+		"npcImageSuffix": "_fall",
+		"season": "fall",
+		"gear": true
 	  },
 	  "specialClass": "healer",
 	  "text": "Death's Head Mask",
@@ -19783,8 +19894,8 @@ function getQuestContentByKey(questKey) {
 	"head_special_fall2021Rogue": {
 	  "set": "fall2021OozeRogueSet",
 	  "event": {
-		"start": "2021-09-21T08:00-04:00",
-		"end": "2021-10-31T20:00-04:00",
+		"start": "2023-09-21T08:00-04:00",
+		"end": "2023-10-31T23:59-04:00",
 		"npcImageSuffix": "_fall",
 		"season": "fall",
 		"gear": true
@@ -19805,8 +19916,8 @@ function getQuestContentByKey(questKey) {
 	"head_special_fall2021Warrior": {
 	  "set": "fall2021HeadlessWarriorSet",
 	  "event": {
-		"start": "2021-09-21T08:00-04:00",
-		"end": "2021-10-31T20:00-04:00",
+		"start": "2023-09-21T08:00-04:00",
+		"end": "2023-10-31T23:59-04:00",
 		"npcImageSuffix": "_fall",
 		"season": "fall",
 		"gear": true
@@ -19827,8 +19938,8 @@ function getQuestContentByKey(questKey) {
 	"head_special_fall2021Mage": {
 	  "set": "fall2021BrainEaterMageSet",
 	  "event": {
-		"start": "2021-09-21T08:00-04:00",
-		"end": "2021-10-31T20:00-04:00",
+		"start": "2023-09-21T08:00-04:00",
+		"end": "2023-10-31T23:59-04:00",
 		"npcImageSuffix": "_fall",
 		"season": "fall",
 		"gear": true
@@ -19849,8 +19960,8 @@ function getQuestContentByKey(questKey) {
 	"head_special_fall2021Healer": {
 	  "set": "fall2021FlameSummonerHealerSet",
 	  "event": {
-		"start": "2021-09-21T08:00-04:00",
-		"end": "2021-10-31T20:00-04:00",
+		"start": "2023-09-21T08:00-04:00",
+		"end": "2023-10-31T23:59-04:00",
 		"npcImageSuffix": "_fall",
 		"season": "fall",
 		"gear": true
@@ -20149,8 +20260,8 @@ function getQuestContentByKey(questKey) {
 	"head_special_fall2022Rogue": {
 	  "set": "fall2022KappaRogueSet",
 	  "event": {
-		"start": "2022-09-20T08:00-04:00",
-		"end": "2022-10-31T20:00-04:00",
+		"start": "2023-09-21T08:00-04:00",
+		"end": "2023-10-31T23:59-04:00",
 		"npcImageSuffix": "_fall",
 		"season": "fall",
 		"gear": true
@@ -20171,8 +20282,8 @@ function getQuestContentByKey(questKey) {
 	"head_special_fall2022Warrior": {
 	  "set": "fall2022OrcWarriorSet",
 	  "event": {
-		"start": "2022-09-20T08:00-04:00",
-		"end": "2022-10-31T20:00-04:00",
+		"start": "2023-09-21T08:00-04:00",
+		"end": "2023-10-31T23:59-04:00",
 		"npcImageSuffix": "_fall",
 		"season": "fall",
 		"gear": true
@@ -20193,8 +20304,8 @@ function getQuestContentByKey(questKey) {
 	"head_special_fall2022Mage": {
 	  "set": "fall2022HarpyMageSet",
 	  "event": {
-		"start": "2022-09-20T08:00-04:00",
-		"end": "2022-10-31T20:00-04:00",
+		"start": "2023-09-21T08:00-04:00",
+		"end": "2023-10-31T23:59-04:00",
 		"npcImageSuffix": "_fall",
 		"season": "fall",
 		"gear": true
@@ -20215,8 +20326,8 @@ function getQuestContentByKey(questKey) {
 	"head_special_fall2022Healer": {
 	  "set": "fall2022WatcherHealerSet",
 	  "event": {
-		"start": "2022-09-20T08:00-04:00",
-		"end": "2022-10-31T20:00-04:00",
+		"start": "2023-09-21T08:00-04:00",
+		"end": "2023-10-31T23:59-04:00",
 		"npcImageSuffix": "_fall",
 		"season": "fall",
 		"gear": true
@@ -21710,6 +21821,21 @@ function getQuestContentByKey(questKey) {
 	  "per": 0,
 	  "con": 0
 	},
+	"head_mystery_202310": {
+	  "text": "Wraith's Hood",
+	  "notes": "It hides your face, and yet lends your eyes an unsettling and spectral glow. Confers no benefit. October 2023 Subscriber Item.",
+	  "mystery": "202310",
+	  "value": 0,
+	  "type": "head",
+	  "key": "head_mystery_202310",
+	  "set": "mystery-202310",
+	  "klass": "mystery",
+	  "index": "202310",
+	  "str": 0,
+	  "int": 0,
+	  "per": 0,
+	  "con": 0
+	},
 	"head_mystery_301404": {
 	  "text": "Fancy Top Hat",
 	  "notes": "A fancy top hat for the finest of gentlefolk! January 3015 Subscriber Item. Confers no benefit.",
@@ -22988,72 +23114,72 @@ function getQuestContentByKey(questKey) {
 	  "str": 0,
 	  "con": 0
 	},
-	"shield_warrior_1": {
-	  "text": "Wooden Shield",
-	  "notes": "Round shield of thick wood. Increases Constitution by 2.",
+	"shield_healer_1": {
+	  "text": "Medic Buckler",
+	  "notes": "Easy to disengage, freeing a hand for bandaging. Increases Constitution by 2.",
 	  "con": 2,
 	  "value": 20,
 	  "type": "shield",
-	  "key": "shield_warrior_1",
-	  "set": "warrior-1",
-	  "klass": "warrior",
+	  "key": "shield_healer_1",
+	  "set": "healer-1",
+	  "klass": "healer",
 	  "index": "1",
 	  "str": 0,
 	  "int": 0,
 	  "per": 0
 	},
-	"shield_warrior_2": {
-	  "text": "Buckler",
-	  "notes": "Light and sturdy, quick to bring to the defense. Increases Constitution by 3.",
-	  "con": 3,
+	"shield_healer_2": {
+	  "text": "Kite Shield",
+	  "notes": "Tapered shield with the symbol of healing. Increases Constitution by 4.",
+	  "con": 4,
 	  "value": 35,
 	  "type": "shield",
-	  "key": "shield_warrior_2",
-	  "set": "warrior-2",
-	  "klass": "warrior",
+	  "key": "shield_healer_2",
+	  "set": "healer-2",
+	  "klass": "healer",
 	  "index": "2",
 	  "str": 0,
 	  "int": 0,
 	  "per": 0
 	},
-	"shield_warrior_3": {
-	  "text": "Reinforced Shield",
-	  "notes": "Made of wood but bolstered with metal bands. Increases Constitution by 5.",
-	  "con": 5,
+	"shield_healer_3": {
+	  "text": "Protector Shield",
+	  "notes": "Traditional shield of defender knights. Increases Constitution by 6.",
+	  "con": 6,
 	  "value": 50,
 	  "type": "shield",
-	  "key": "shield_warrior_3",
-	  "set": "warrior-3",
-	  "klass": "warrior",
+	  "key": "shield_healer_3",
+	  "set": "healer-3",
+	  "klass": "healer",
 	  "index": "3",
 	  "str": 0,
 	  "int": 0,
 	  "per": 0
 	},
-	"shield_warrior_4": {
-	  "text": "Red Shield",
-	  "notes": "Rebukes blows with a burst of flame. Increases Constitution by 7.",
-	  "con": 7,
+	"shield_healer_4": {
+	  "text": "Savior Shield",
+	  "notes": "Stops blows aimed at nearby innocents as well as those aimed at you. Increases Constitution by 9.",
+	  "con": 9,
 	  "value": 70,
 	  "type": "shield",
-	  "key": "shield_warrior_4",
-	  "set": "warrior-4",
-	  "klass": "warrior",
+	  "key": "shield_healer_4",
+	  "set": "healer-4",
+	  "klass": "healer",
 	  "index": "4",
 	  "str": 0,
 	  "int": 0,
 	  "per": 0
 	},
-	"shield_warrior_5": {
-	  "text": "Golden Shield",
-	  "notes": "Shining badge of the vanguard. Increases Constitution by 9.",
-	  "con": 9,
+	"shield_healer_5": {
+	  "text": "Royal Shield",
+	  "notes": "Bestowed upon those most dedicated to the kingdom's defense. Increases Constitution by 12.",
+	  "con": 12,
 	  "value": 90,
 	  "last": true,
 	  "type": "shield",
-	  "key": "shield_warrior_5",
-	  "set": "warrior-5",
-	  "klass": "warrior",
+	  "key": "shield_healer_5",
+	  "set": "healer-5",
+	  "klass": "healer",
 	  "index": "5",
 	  "str": 0,
 	  "int": 0,
@@ -23158,72 +23284,72 @@ function getQuestContentByKey(questKey) {
 	  "per": 0,
 	  "con": 0
 	},
-	"shield_healer_1": {
-	  "text": "Medic Buckler",
-	  "notes": "Easy to disengage, freeing a hand for bandaging. Increases Constitution by 2.",
+	"shield_warrior_1": {
+	  "text": "Wooden Shield",
+	  "notes": "Round shield of thick wood. Increases Constitution by 2.",
 	  "con": 2,
 	  "value": 20,
 	  "type": "shield",
-	  "key": "shield_healer_1",
-	  "set": "healer-1",
-	  "klass": "healer",
+	  "key": "shield_warrior_1",
+	  "set": "warrior-1",
+	  "klass": "warrior",
 	  "index": "1",
 	  "str": 0,
 	  "int": 0,
 	  "per": 0
 	},
-	"shield_healer_2": {
-	  "text": "Kite Shield",
-	  "notes": "Tapered shield with the symbol of healing. Increases Constitution by 4.",
-	  "con": 4,
+	"shield_warrior_2": {
+	  "text": "Buckler",
+	  "notes": "Light and sturdy, quick to bring to the defense. Increases Constitution by 3.",
+	  "con": 3,
 	  "value": 35,
 	  "type": "shield",
-	  "key": "shield_healer_2",
-	  "set": "healer-2",
-	  "klass": "healer",
+	  "key": "shield_warrior_2",
+	  "set": "warrior-2",
+	  "klass": "warrior",
 	  "index": "2",
 	  "str": 0,
 	  "int": 0,
 	  "per": 0
 	},
-	"shield_healer_3": {
-	  "text": "Protector Shield",
-	  "notes": "Traditional shield of defender knights. Increases Constitution by 6.",
-	  "con": 6,
+	"shield_warrior_3": {
+	  "text": "Reinforced Shield",
+	  "notes": "Made of wood but bolstered with metal bands. Increases Constitution by 5.",
+	  "con": 5,
 	  "value": 50,
 	  "type": "shield",
-	  "key": "shield_healer_3",
-	  "set": "healer-3",
-	  "klass": "healer",
+	  "key": "shield_warrior_3",
+	  "set": "warrior-3",
+	  "klass": "warrior",
 	  "index": "3",
 	  "str": 0,
 	  "int": 0,
 	  "per": 0
 	},
-	"shield_healer_4": {
-	  "text": "Savior Shield",
-	  "notes": "Stops blows aimed at nearby innocents as well as those aimed at you. Increases Constitution by 9.",
-	  "con": 9,
+	"shield_warrior_4": {
+	  "text": "Red Shield",
+	  "notes": "Rebukes blows with a burst of flame. Increases Constitution by 7.",
+	  "con": 7,
 	  "value": 70,
 	  "type": "shield",
-	  "key": "shield_healer_4",
-	  "set": "healer-4",
-	  "klass": "healer",
+	  "key": "shield_warrior_4",
+	  "set": "warrior-4",
+	  "klass": "warrior",
 	  "index": "4",
 	  "str": 0,
 	  "int": 0,
 	  "per": 0
 	},
-	"shield_healer_5": {
-	  "text": "Royal Shield",
-	  "notes": "Bestowed upon those most dedicated to the kingdom's defense. Increases Constitution by 12.",
-	  "con": 12,
+	"shield_warrior_5": {
+	  "text": "Golden Shield",
+	  "notes": "Shining badge of the vanguard. Increases Constitution by 9.",
+	  "con": 9,
 	  "value": 90,
 	  "last": true,
 	  "type": "shield",
-	  "key": "shield_healer_5",
-	  "set": "healer-5",
-	  "klass": "healer",
+	  "key": "shield_warrior_5",
+	  "set": "warrior-5",
+	  "klass": "warrior",
 	  "index": "5",
 	  "str": 0,
 	  "int": 0,
@@ -23565,8 +23691,10 @@ function getQuestContentByKey(questKey) {
 	"shield_special_fallRogue": {
 	  "set": "vampireSmiterSet",
 	  "event": {
-		"start": "2014-09-21",
-		"end": "2014-11-01",
+		"start": "2023-09-21T08:00-04:00",
+		"end": "2023-10-31T23:59-04:00",
+		"npcImageSuffix": "_fall",
+		"season": "fall",
 		"gear": true
 	  },
 	  "specialClass": "rogue",
@@ -23585,8 +23713,10 @@ function getQuestContentByKey(questKey) {
 	"shield_special_fallWarrior": {
 	  "set": "monsterOfScienceSet",
 	  "event": {
-		"start": "2014-09-21",
-		"end": "2014-11-01",
+		"start": "2023-09-21T08:00-04:00",
+		"end": "2023-10-31T23:59-04:00",
+		"npcImageSuffix": "_fall",
+		"season": "fall",
 		"gear": true
 	  },
 	  "specialClass": "warrior",
@@ -23605,8 +23735,10 @@ function getQuestContentByKey(questKey) {
 	"shield_special_fallHealer": {
 	  "set": "mummyMedicSet",
 	  "event": {
-		"start": "2014-09-21",
-		"end": "2014-11-01",
+		"start": "2023-09-21T08:00-04:00",
+		"end": "2023-10-31T23:59-04:00",
+		"npcImageSuffix": "_fall",
+		"season": "fall",
 		"gear": true
 	  },
 	  "specialClass": "healer",
@@ -23805,8 +23937,10 @@ function getQuestContentByKey(questKey) {
 	"shield_special_fall2015Rogue": {
 	  "set": "battleRogueSet",
 	  "event": {
-		"start": "2015-09-21",
-		"end": "2015-11-01",
+		"start": "2023-09-21T08:00-04:00",
+		"end": "2023-10-31T23:59-04:00",
+		"npcImageSuffix": "_fall",
+		"season": "fall",
 		"gear": true
 	  },
 	  "specialClass": "rogue",
@@ -23825,8 +23959,10 @@ function getQuestContentByKey(questKey) {
 	"shield_special_fall2015Warrior": {
 	  "set": "scarecrowWarriorSet",
 	  "event": {
-		"start": "2015-09-21",
-		"end": "2015-11-01",
+		"start": "2023-09-21T08:00-04:00",
+		"end": "2023-10-31T23:59-04:00",
+		"npcImageSuffix": "_fall",
+		"season": "fall",
 		"gear": true
 	  },
 	  "specialClass": "warrior",
@@ -23845,8 +23981,10 @@ function getQuestContentByKey(questKey) {
 	"shield_special_fall2015Healer": {
 	  "set": "potionerSet",
 	  "event": {
-		"start": "2015-09-21",
-		"end": "2015-11-01",
+		"start": "2023-09-21T08:00-04:00",
+		"end": "2023-10-31T23:59-04:00",
+		"npcImageSuffix": "_fall",
+		"season": "fall",
 		"gear": true
 	  },
 	  "specialClass": "healer",
@@ -24045,8 +24183,10 @@ function getQuestContentByKey(questKey) {
 	"shield_special_fall2016Rogue": {
 	  "set": "fall2016BlackWidowSet",
 	  "event": {
-		"start": "2016-09-20",
-		"end": "2016-11-02",
+		"start": "2023-09-21T08:00-04:00",
+		"end": "2023-10-31T23:59-04:00",
+		"npcImageSuffix": "_fall",
+		"season": "fall",
 		"gear": true
 	  },
 	  "specialClass": "rogue",
@@ -24065,8 +24205,10 @@ function getQuestContentByKey(questKey) {
 	"shield_special_fall2016Warrior": {
 	  "set": "fall2016SwampThingSet",
 	  "event": {
-		"start": "2016-09-20",
-		"end": "2016-11-02",
+		"start": "2023-09-21T08:00-04:00",
+		"end": "2023-10-31T23:59-04:00",
+		"npcImageSuffix": "_fall",
+		"season": "fall",
 		"gear": true
 	  },
 	  "specialClass": "warrior",
@@ -24085,8 +24227,10 @@ function getQuestContentByKey(questKey) {
 	"shield_special_fall2016Healer": {
 	  "set": "fall2016GorgonHealerSet",
 	  "event": {
-		"start": "2016-09-20",
-		"end": "2016-11-02",
+		"start": "2023-09-21T08:00-04:00",
+		"end": "2023-10-31T23:59-04:00",
+		"npcImageSuffix": "_fall",
+		"season": "fall",
 		"gear": true
 	  },
 	  "specialClass": "healer",
@@ -24285,8 +24429,10 @@ function getQuestContentByKey(questKey) {
 	"shield_special_fall2017Rogue": {
 	  "set": "fall2017TrickOrTreatSet",
 	  "event": {
-		"start": "2017-09-21",
-		"end": "2017-11-02",
+		"start": "2023-09-21T08:00-04:00",
+		"end": "2023-10-31T23:59-04:00",
+		"npcImageSuffix": "_fall",
+		"season": "fall",
 		"gear": true
 	  },
 	  "specialClass": "rogue",
@@ -24305,8 +24451,10 @@ function getQuestContentByKey(questKey) {
 	"shield_special_fall2017Warrior": {
 	  "set": "fall2017HabitoweenSet",
 	  "event": {
-		"start": "2017-09-21",
-		"end": "2017-11-02",
+		"start": "2023-09-21T08:00-04:00",
+		"end": "2023-10-31T23:59-04:00",
+		"npcImageSuffix": "_fall",
+		"season": "fall",
 		"gear": true
 	  },
 	  "specialClass": "warrior",
@@ -24325,8 +24473,10 @@ function getQuestContentByKey(questKey) {
 	"shield_special_fall2017Healer": {
 	  "set": "fall2017HauntedHouseSet",
 	  "event": {
-		"start": "2017-09-21",
-		"end": "2017-11-02",
+		"start": "2023-09-21T08:00-04:00",
+		"end": "2023-10-31T23:59-04:00",
+		"npcImageSuffix": "_fall",
+		"season": "fall",
 		"gear": true
 	  },
 	  "specialClass": "healer",
@@ -24527,8 +24677,10 @@ function getQuestContentByKey(questKey) {
 	  "text": "Vial of Temptation",
 	  "notes": "This bottle represents all the distractions and troubles that keep you from being your best self. Resist! We're cheering for you! Increases Strength by 8. Limited Edition 2018 Autumn Gear.",
 	  "event": {
-		"start": "2018-09-20",
-		"end": "2018-11-02",
+		"start": "2023-09-21T08:00-04:00",
+		"end": "2023-10-31T23:59-04:00",
+		"npcImageSuffix": "_fall",
+		"season": "fall",
 		"gear": true
 	  },
 	  "specialClass": "rogue",
@@ -24545,8 +24697,10 @@ function getQuestContentByKey(questKey) {
 	"shield_special_fall2018Warrior": {
 	  "set": "fall2018MinotaurWarriorSet",
 	  "event": {
-		"start": "2018-09-20",
-		"end": "2018-11-02",
+		"start": "2023-09-21T08:00-04:00",
+		"end": "2023-10-31T23:59-04:00",
+		"npcImageSuffix": "_fall",
+		"season": "fall",
 		"gear": true
 	  },
 	  "specialClass": "warrior",
@@ -24565,8 +24719,10 @@ function getQuestContentByKey(questKey) {
 	"shield_special_fall2018Healer": {
 	  "set": "fall2018CarnivorousPlantSet",
 	  "event": {
-		"start": "2018-09-20",
-		"end": "2018-11-02",
+		"start": "2023-09-21T08:00-04:00",
+		"end": "2023-10-31T23:59-04:00",
+		"npcImageSuffix": "_fall",
+		"season": "fall",
 		"gear": true
 	  },
 	  "specialClass": "healer",
@@ -24794,8 +24950,10 @@ function getQuestContentByKey(questKey) {
 	"shield_special_fall2019Rogue": {
 	  "set": "fall2019OperaticSpecterSet",
 	  "event": {
-		"start": "2019-09-24",
-		"end": "2019-11-02",
+		"start": "2023-09-21T08:00-04:00",
+		"end": "2023-10-31T23:59-04:00",
+		"npcImageSuffix": "_fall",
+		"season": "fall",
 		"gear": true
 	  },
 	  "specialClass": "rogue",
@@ -24814,8 +24972,10 @@ function getQuestContentByKey(questKey) {
 	"shield_special_fall2019Warrior": {
 	  "set": "fall2019RavenSet",
 	  "event": {
-		"start": "2019-09-24",
-		"end": "2019-11-02",
+		"start": "2023-09-21T08:00-04:00",
+		"end": "2023-10-31T23:59-04:00",
+		"npcImageSuffix": "_fall",
+		"season": "fall",
 		"gear": true
 	  },
 	  "specialClass": "warrior",
@@ -24834,8 +24994,10 @@ function getQuestContentByKey(questKey) {
 	"shield_special_fall2019Healer": {
 	  "set": "fall2019LichSet",
 	  "event": {
-		"start": "2019-09-24",
-		"end": "2019-11-02",
+		"start": "2023-09-21T08:00-04:00",
+		"end": "2023-10-31T23:59-04:00",
+		"npcImageSuffix": "_fall",
+		"season": "fall",
 		"gear": true
 	  },
 	  "specialClass": "healer",
@@ -25050,15 +25212,11 @@ function getQuestContentByKey(questKey) {
 	  "text": "Swift Katar",
 	  "notes": "Wielding a katar, you'd better be quick on your feet... This blade will serve you well if you strike fast, but don't over-commit! Increases Strength by 8. Limited Edition 2020 Autumn Gear.",
 	  "event": {
-		"start": "2020-09-22T08:00-04:00",
-		"end": "2020-10-31T20:00-04:00",
-		"gear": true,
-		"gemsPromo": {
-		  "4gems": 5,
-		  "21gems": 30,
-		  "42gems": 60,
-		  "84gems": 125
-		}
+		"start": "2023-09-21T08:00-04:00",
+		"end": "2023-10-31T23:59-04:00",
+		"npcImageSuffix": "_fall",
+		"season": "fall",
+		"gear": true
 	  },
 	  "specialClass": "rogue",
 	  "value": 80,
@@ -25074,15 +25232,11 @@ function getQuestContentByKey(questKey) {
 	"shield_special_fall2020Warrior": {
 	  "set": "fall2020WraithWarriorSet",
 	  "event": {
-		"start": "2020-09-22T08:00-04:00",
-		"end": "2020-10-31T20:00-04:00",
-		"gear": true,
-		"gemsPromo": {
-		  "4gems": 5,
-		  "21gems": 30,
-		  "42gems": 60,
-		  "84gems": 125
-		}
+		"start": "2023-09-21T08:00-04:00",
+		"end": "2023-10-31T23:59-04:00",
+		"npcImageSuffix": "_fall",
+		"season": "fall",
+		"gear": true
 	  },
 	  "specialClass": "warrior",
 	  "text": "Spirit's Shield",
@@ -25100,15 +25254,11 @@ function getQuestContentByKey(questKey) {
 	"shield_special_fall2020Healer": {
 	  "set": "fall2020DeathsHeadMothHealerSet",
 	  "event": {
-		"start": "2020-09-22T08:00-04:00",
-		"end": "2020-10-31T20:00-04:00",
-		"gear": true,
-		"gemsPromo": {
-		  "4gems": 5,
-		  "21gems": 30,
-		  "42gems": 60,
-		  "84gems": 125
-		}
+		"start": "2023-09-21T08:00-04:00",
+		"end": "2023-10-31T23:59-04:00",
+		"npcImageSuffix": "_fall",
+		"season": "fall",
+		"gear": true
 	  },
 	  "specialClass": "healer",
 	  "text": "Cocoon Carryall",
@@ -25324,8 +25474,8 @@ function getQuestContentByKey(questKey) {
 	"shield_special_fall2021Rogue": {
 	  "set": "fall2021OozeRogueSet",
 	  "event": {
-		"start": "2021-09-21T08:00-04:00",
-		"end": "2021-10-31T20:00-04:00",
+		"start": "2023-09-21T08:00-04:00",
+		"end": "2023-10-31T23:59-04:00",
 		"npcImageSuffix": "_fall",
 		"season": "fall",
 		"gear": true
@@ -25346,8 +25496,8 @@ function getQuestContentByKey(questKey) {
 	"shield_special_fall2021Warrior": {
 	  "set": "fall2021HeadlessWarriorSet",
 	  "event": {
-		"start": "2021-09-21T08:00-04:00",
-		"end": "2021-10-31T20:00-04:00",
+		"start": "2023-09-21T08:00-04:00",
+		"end": "2023-10-31T23:59-04:00",
 		"npcImageSuffix": "_fall",
 		"season": "fall",
 		"gear": true
@@ -25368,8 +25518,8 @@ function getQuestContentByKey(questKey) {
 	"shield_special_fall2021Healer": {
 	  "set": "fall2021FlameSummonerHealerSet",
 	  "event": {
-		"start": "2021-09-21T08:00-04:00",
-		"end": "2021-10-31T20:00-04:00",
+		"start": "2023-09-21T08:00-04:00",
+		"end": "2023-10-31T23:59-04:00",
 		"npcImageSuffix": "_fall",
 		"season": "fall",
 		"gear": true
@@ -25588,8 +25738,8 @@ function getQuestContentByKey(questKey) {
 	"shield_special_fall2022Rogue": {
 	  "set": "fall2022KappaRogueSet",
 	  "event": {
-		"start": "2022-09-20T08:00-04:00",
-		"end": "2022-10-31T20:00-04:00",
+		"start": "2023-09-21T08:00-04:00",
+		"end": "2023-10-31T23:59-04:00",
 		"npcImageSuffix": "_fall",
 		"season": "fall",
 		"gear": true
@@ -25610,8 +25760,8 @@ function getQuestContentByKey(questKey) {
 	"shield_special_fall2022Warrior": {
 	  "set": "fall2022OrcWarriorSet",
 	  "event": {
-		"start": "2022-09-20T08:00-04:00",
-		"end": "2022-10-31T20:00-04:00",
+		"start": "2023-09-21T08:00-04:00",
+		"end": "2023-10-31T23:59-04:00",
 		"npcImageSuffix": "_fall",
 		"season": "fall",
 		"gear": true
@@ -25632,8 +25782,8 @@ function getQuestContentByKey(questKey) {
 	"shield_special_fall2022Healer": {
 	  "set": "fall2022WatcherHealerSet",
 	  "event": {
-		"start": "2022-09-20T08:00-04:00",
-		"end": "2022-10-31T20:00-04:00",
+		"start": "2023-09-21T08:00-04:00",
+		"end": "2023-10-31T23:59-04:00",
 		"npcImageSuffix": "_fall",
 		"season": "fall",
 		"gear": true
@@ -25786,10 +25936,10 @@ function getQuestContentByKey(questKey) {
 	"shield_special_summer2023Rogue": {
 	  "set": "summer2023GuppyRogueSet",
 	  "event": {
-		"start": "2023-06-20T08:00-04:00",
-		"end": "2023-07-31T23:59-04:00",
-		"npcImageSuffix": "_summer",
-		"season": "summer",
+		"start": "2023-09-21T08:00-04:00",
+		"end": "2023-10-31T23:59-04:00",
+		"npcImageSuffix": "_fall",
+		"season": "fall",
 		"gear": true
 	  },
 	  "specialClass": "rogue",
@@ -25808,10 +25958,10 @@ function getQuestContentByKey(questKey) {
 	"shield_special_summer2023Warrior": {
 	  "set": "summer2023GoldfishWarriorSet",
 	  "event": {
-		"start": "2023-06-20T08:00-04:00",
-		"end": "2023-07-31T23:59-04:00",
-		"npcImageSuffix": "_summer",
-		"season": "summer",
+		"start": "2023-09-21T08:00-04:00",
+		"end": "2023-10-31T23:59-04:00",
+		"npcImageSuffix": "_fall",
+		"season": "fall",
 		"gear": true
 	  },
 	  "specialClass": "warrior",
@@ -25830,10 +25980,10 @@ function getQuestContentByKey(questKey) {
 	"shield_special_summer2023Healer": {
 	  "set": "summer2023KelpHealerSet",
 	  "event": {
-		"start": "2023-06-20T08:00-04:00",
-		"end": "2023-07-31T23:59-04:00",
-		"npcImageSuffix": "_summer",
-		"season": "summer",
+		"start": "2023-09-21T08:00-04:00",
+		"end": "2023-10-31T23:59-04:00",
+		"npcImageSuffix": "_fall",
+		"season": "fall",
 		"gear": true
 	  },
 	  "specialClass": "healer",
@@ -29215,6 +29365,21 @@ function getQuestContentByKey(questKey) {
 	  "set": "mystery-202309",
 	  "klass": "mystery",
 	  "index": "202309",
+	  "str": 0,
+	  "int": 0,
+	  "per": 0,
+	  "con": 0
+	},
+	"headAccessory_mystery_202310": {
+	  "text": "Crown of Ghostly Lights",
+	  "notes": "Like a will-o'-the-wisp, these unearthly lights may lure curious souls to their doom. Confers no benefit. October 2023 Subscriber Item.",
+	  "mystery": "202310",
+	  "value": 0,
+	  "type": "headAccessory",
+	  "key": "headAccessory_mystery_202310",
+	  "set": "mystery-202310",
+	  "klass": "mystery",
+	  "index": "202310",
 	  "str": 0,
 	  "int": 0,
 	  "per": 0,
