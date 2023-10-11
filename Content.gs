@@ -28,7 +28,8 @@ function getQuestContentByKey(questKey) {
   /**
    * 
    * Habitica Content: https://habitica.com/apidoc/#api-Content-ContentGet
-   * From: 10.10.2023
+   * From: 11.10.2023
+   * AppVersion: 5.8.0
    */
   // The "quests" part of the habitica content
   const HabiticaQuestsContent = {
@@ -10266,6 +10267,20 @@ function getQuestContentByKey(questKey) {
 	  "index": "cleaningCloth",
 	  "int": 0,
 	  "per": 0
+	},
+	"weapon_armoire_ridingBroom": {
+	  "str": 5,
+	  "int": 3,
+	  "set": "somethingSpooky",
+	  "notes": "Run all your most magical errands on this fine broom--or, just take it for a joyride around the neighborhood. Whee! Increases Strength by 5 and Intelligence by 3. Enchanted Armoire: Spooky Sorcery Set (Item 1 of 3) ",
+	  "text": "Riding Broom",
+	  "value": 100,
+	  "type": "weapon",
+	  "key": "weapon_armoire_ridingBroom",
+	  "klass": "armoire",
+	  "index": "ridingBroom",
+	  "per": 0,
+	  "con": 0
 	},
 	"armor_healer_1": {
 	  "text": "Acolyte Robe",
@@ -23113,6 +23128,34 @@ function getQuestContentByKey(questKey) {
 	  "index": "admiralsBicorne",
 	  "str": 0,
 	  "con": 0
+	},
+	"head_armoire_blackSpookySorceryHat": {
+	  "int": 5,
+	  "con": 3,
+	  "set": "somethingSpooky",
+	  "notes": "Black as night and full of secrets, this hat is suited to all your sorcerous needs. Increases Intelligence by 5 and Constitution by 3. Enchanted Armoire: Spooky Sorcery Set (Item 3 of 3).",
+	  "text": "Black Spooky Sorcery Hat",
+	  "value": 100,
+	  "type": "head",
+	  "key": "head_armoire_blackSpookySorceryHat",
+	  "klass": "armoire",
+	  "index": "blackSpookySorceryHat",
+	  "str": 0,
+	  "per": 0
+	},
+	"head_armoire_purpleSpookySorceryHat": {
+	  "per": 5,
+	  "con": 3,
+	  "set": "somethingSpooky",
+	  "notes": "Purple as dusk and full of mysteries, this hat is suited to all your sorcerous needs. Increases Perception by 5 and Constitution by 3. Enchanted Armoire: Spooky Sorcery Set (Item 2 of 3).",
+	  "text": "Purple Spooky Sorcery Hat",
+	  "value": 100,
+	  "type": "head",
+	  "key": "head_armoire_purpleSpookySorceryHat",
+	  "klass": "armoire",
+	  "index": "purpleSpookySorceryHat",
+	  "str": 0,
+	  "int": 0
 	},
 	"shield_healer_1": {
 	  "text": "Medic Buckler",
