@@ -25,6 +25,15 @@ function padLeft(input, targetLength, padString = "&nbsp;") {
 }
 
 /**
+ * Function that checks if the object is a valid Date object without instanceof
+ * 
+ * Attention: "instanceof" doesn't work, if the Date is passed from script to a library function!
+ */
+function isDate(dateTime) {
+  return dateTime && !isNaN(Date.parse(dateTime));
+}
+
+/**
  * Probability is percentage as a float number from 0 to 1.0
  * 
  * 0.1 = 10%, 1.0 = 100%
@@ -75,6 +84,40 @@ function getHoursDifferenceToDayStart(user) {
   const hoursDifferenceToDayStart = Math.round(timeDifference / (1000 * 60 * 60) * 10) / 10;
 
   return hoursDifferenceToDayStart;
+}
+
+function getTimeDifferenceToNow(dateTime) {
+  if (isDate(dateTime)) {
+    const now = new Date();
+    const timeDifference = Math.abs(now - dateTime);
+    return {
+      days: Math.floor(timeDifference / (1000 * 60 * 60 * 24)),
+      hours: Math.floor((timeDifference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)),
+      minutes: Math.floor((timeDifference % (1000 * 60 * 60)) / (1000 * 60)),
+    };
+  } else {
+    console.error(`getTimeDifferenceToNow: Passed invalid dateTime parameter:`, dateTime, '\ntype:', typeof dateTime);
+  }
+  return undefined;
+}
+
+function timeDifferenceToString(timeDifference) {
+  if (timeDifference && timeDifference.days !== undefined && timeDifference.hours !== undefined && timeDifference.minutes !== undefined) {
+    return `${padLeft(timeDifference.days, 2)}d${padLeft(timeDifference.hours, 2)}h${padLeft(timeDifference.minutes, 2)}m`;
+  }
+  return '';
+}
+
+function getTimeDifferenceToNowAsString(dateTime, highlightAfterXDays = 10) {
+  let result = ``;
+  const timeDifference = getTimeDifferenceToNow(dateTime);
+  if (timeDifference) {
+    result += timeDifferenceToString(timeDifference);
+    if (timeDifference.days >= highlightAfterXDays) {
+      result = `**${result}**`;
+    }
+  }
+  return result;
 }
 
 /**

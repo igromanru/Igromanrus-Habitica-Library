@@ -282,9 +282,25 @@ function buyGemPurchasableItem(type, key, amount = 1) {
   return false;
 }
 
+/**
+ * Accept the current quest invite
+ */
 function acceptQuest() {
   const result = fetchPost(`${PartyAPI}/quests/accept`);
   return result !== undefined && result && result.success === true;
+}
+
+/**
+ * Force start's the current party quest
+ * 
+ * Returns a quest object
+ */
+function forceStartQuest() {
+  const result = fetchPost(`${PartyAPI}/quests/force-start`);
+  if (result !== undefined && result && result.success === true && typeof result.data === 'object') {
+    return result.data;
+  }
+  return undefined;
 }
 
 /**
@@ -434,6 +450,20 @@ function getWebHooks() {
 }
 
 /**
+ * Get all available content objects
+ * 
+ * See: https://habitica.com/apidoc/#api-Content-ContentGet
+ */
+function getHabiticaContent(language = "en") {
+  const result = fetchGet(`${BaseUrl}/v4/content?language=${language}`, true);
+  if (result !== undefined && result && typeof result.data === 'object') {
+    return result.data;
+  }
+
+  return undefined;
+}
+
+/**
  * Creates a new WebHook
  * 
  * Returns the new WebHook object
@@ -484,8 +514,8 @@ function deleteWebHook(webhookId) {
   return [];
 }
 
-function fetchGet(url) {
-  return fetch(url, 'GET');
+function fetchGet(url, anonymous = false) {
+  return fetch(url, 'GET', {}, anonymous);
 }
 
 function fetchPost(url, requestBody = undefined, contentType = 'application/json') {
@@ -503,21 +533,26 @@ function fetchDelete(url) {
   return fetch(url, 'DELETE');
 }
 
-function fetch(url, method = 'GET', params = {}) {
+function fetch(url, method = 'GET', params = {}, anonymous = false) {
   if (!url) {
     console.error(`fetch error: Invalid 'url' parameter value: "${url}"`);
     return undefined;
   }
-  if (!isAuthorizationHeaderSet()) {
+  if (!anonymous && !isAuthorizationHeaderSet()) {
     console.error(`fetch error: API Authorization wasn't set!\nPlease call the ${setApiAuthorization.name} function with valid User ID and API Token at the beginning of the script!`);
     return undefined;
   }
 
   params = Object.assign({
     'method': method,
-    'headers': Headers,
     'muteHttpExceptions': true
   }, params);
+
+  if(!anonymous) {
+    params = Object.assign(params, {
+      'headers': Headers
+    });
+  }
 
   for (let i = 0; i < 3; i++) {
     const response = UrlFetchApp.fetch(url, params);

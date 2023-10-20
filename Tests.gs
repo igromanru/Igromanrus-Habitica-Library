@@ -18,22 +18,6 @@ function testPadLeft() {
   console.log(padLeft(hp2, 2));
 }
 
-/*function testHabiticaContent() {
-  const timeHandler = 'testHabiticaContent';
-  console.time(timeHandler);
-
-  console.time("setHabiticaQuestsContent");
-  setHabiticaQuestsContent(HabiticaQuestsContent);
-  console.timeEnd("setHabiticaQuestsContent");
-
-  console.time("getHabiticaQuestsContent");
-  const value = getHabiticaQuestsContent();
-  console.log(value !== undefined);
-  console.timeEnd("getHabiticaQuestsContent");
-
-  console.timeEnd(timeHandler);
-}*/
-
 function testGetQuestContentByKey() {
   const timeHandler = 'testGetQuestContentByKey';
   console.time(timeHandler);
@@ -47,4 +31,14 @@ function testGetQuestContentByKey() {
   console.log(`Boss HP: ${questContent.boss.hp}`);
 
   console.timeEnd(timeHandler);
+}
+
+function testApi() {
+  const user = getHabiticaContent();
+  console.log(user);
+}
+
+function testGetTimeDifferenceToNow() {
+  console.log(JSON.stringify(getTimeDifferenceToNow(new Date())));
+  console.log(JSON.stringify(getTimeDifferenceToNow("wrong param")));
 }
