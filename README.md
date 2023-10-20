@@ -16,7 +16,7 @@ Script URL: https://script.google.com/d/1zUBDNbi5fncQ3-mdKNE6SWucktAZhzvIy9Nho68
 ### Initialize the Library
 **Set authorization headers**  
 To be able to call API function from inside the Library, the Library needs to get the request headers set with the UserId and API Token.  
-To ensure that the headers are set every time a function is called in your script, you can call the `initialize` middle in the script (outside of any functions).  
+To ensure that the headers are set every time a function is called in your script, you can call the `initialize` function middle in the script (outside of any functions).  
 Preferably it should be done after the global variables are set.  
 Example:  
 ```js
