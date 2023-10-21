@@ -7,7 +7,11 @@ const WEBHOOK_CONTENT_QUEUE = "WEBHOOK_CONTENT_QUEUE_";
 
 function pushWebHookContentQueueProperty(content) {
   if (typeof content == 'string' && content) {
-    AppScriptProperties.setProperty(WEBHOOK_CONTENT_QUEUE + Utilities.getUuid(), content);
+    const wrapper = {
+      data: content,
+      timestamp: new Date().toUTCString()
+    };
+    AppScriptProperties.setProperty(WEBHOOK_CONTENT_QUEUE + Utilities.getUuid(), JSON.stringify(wrapper));
   }
 }
 
@@ -17,7 +21,19 @@ function popAllWebHookContentQueueProperties() {
     const properties = AppScriptProperties.getProperties();
     for (const [key, value] of Object.entries(properties)) {
       if (key.startsWith(WEBHOOK_CONTENT_QUEUE)) {
-        webHookContents.push(JSON.parse(value));
+        const wrapper = JSON.parse(value);
+        if (wrapper) {
+          if (typeof wrapper.data === 'string') {
+            wrapper.data = JSON.parse(wrapper.data);
+          }
+          if (typeof wrapper.timestamp === 'string') {
+            wrapper.timestamp = new Date(wrapper.timestamp);
+          }
+          webHookContents.push(wrapper);
+        } else {
+          console.error(`popAllWebHookContentQueueProperties: Failed to parse content: ${value}`)
+        }
+        
         AppScriptProperties.deleteProperty(key);
       }
     }
