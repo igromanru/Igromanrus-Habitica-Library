@@ -30,7 +30,7 @@ function padLeft(input, targetLength, padString = "&nbsp;") {
  * Attention: "instanceof" doesn't work, if the Date is passed from script to a library function!
  */
 function isDate(dateTime) {
-  return dateTime && !isNaN(Date.parse(dateTime));
+  return dateTime && (dateTime instanceof Date || !isNaN(Date.parse(dateTime)));
 }
 
 /**
