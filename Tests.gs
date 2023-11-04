@@ -34,8 +34,13 @@ function testGetQuestContentByKey() {
 }
 
 function testApi() {
-  const user = getHabiticaContent();
-  console.log(user);
+  /*const content = getHabiticaContent();
+  console.log(content);*/
+  const UserId = ScriptProperties.getProperty('API_ID');
+  const ApiToken = ScriptProperties.getProperty('API_KEY');
+  setApiAuthorization(UserId, ApiToken);
+
+  customDayStart(1);
 }
 
 function testGetTimeDifferenceToNow() {

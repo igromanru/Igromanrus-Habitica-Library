@@ -11,12 +11,14 @@ function executeAsTriggerAsap(functionName) {
   const triggers = ScriptApp.getProjectTriggers();
   for (const trigger of triggers) {
     if (trigger.getHandlerFunction() === functionName) {
+      console.log(`executeAsTriggerAsap: A trigger for the function "${functionName}" already exists!`);
       return false;
     }
   }
+  console.log(`executeAsTriggerAsap: Creating a trigger for the funtion "${functionName}"`);
   ScriptApp.newTrigger(functionName)
     .timeBased()
-    .after(1)
+    .after(100)
     .create();
   return true;
 }
@@ -27,15 +29,16 @@ function executeAsTriggerAsap(functionName) {
  * Returns the number of triggers that have been deleted
  */
 function deleteTriggerByFunction(functionName) {
-  let deleteCount = 0;
+  let deletedCount = 0;
+  console.log(`deleteTriggerByFunction: ${functionName}`);
 
   const triggers = ScriptApp.getProjectTriggers();
   for (const trigger of triggers) {
     if (trigger.getHandlerFunction() === functionName) {
       ScriptApp.deleteTrigger(trigger);
-      deleteCount++;
+      deletedCount++;
     }
   }
-
-  return deleteCount;
+  console.log(`deleteTriggerByFunction: Deleted count: ${deletedCount}`);
+  return deletedCount;
 }

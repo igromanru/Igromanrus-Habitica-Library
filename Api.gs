@@ -18,6 +18,9 @@ const GroupsAPI = BaseUrl + '/v3/groups';
 const MembersAPI = BaseUrl + '/v3/members';
 const TasksAPI = BaseUrl + '/v3/tasks';
 
+/**
+ * Sets UserId and API Token/Key to the global Headers object that is used for all API requests
+ */
 function setApiAuthorization(userId, apiToken) {
   if (typeof userId !== 'string' || !userId) {
     console.error(`setApiAuthorization: the userId parameter is invalid!`);
@@ -32,11 +35,17 @@ function setApiAuthorization(userId, apiToken) {
   Headers["x-api-key"] = apiToken;
 }
 
+/**
+ * Returns true, if properties "x-api-user" and "x-api-key" in the global Headers object have values
+ */
 function isAuthorizationHeaderSet() {
   return Headers["x-api-user"] && typeof Headers["x-api-user"] === "string"
           && Headers["x-api-user"] && typeof Headers["x-api-key"] === "string";
 }
 
+/**
+ * Returns the global Headers object with properties "x-api-user", "x-api-key", "x-client"
+ */
 function getRequestHeaders() {
   return Headers;
 }
@@ -69,6 +78,8 @@ function getParty() {
 
 /**
  * Get all members for the party
+ * 
+ * See: https://habitica.com/apidoc/#api-Member-GetMembersForGroup
  */
 function getPartyMembers(includeAllPublicFields = false, includeTasks = false, limit = 30, lastId = '') {
   return getGroupMembers('party', includeAllPublicFields, includeTasks, limit, lastId);
@@ -80,7 +91,7 @@ function getPartyMembers(includeAllPublicFields = false, includeTasks = false, l
  * 
  * Returns an array of members or an empty array.
  * 
- * @See: https://habitica.com/apidoc/#api-Member-GetMembersForGroup
+ * See: https://habitica.com/apidoc/#api-Member-GetMembersForGroup
  */
 function getGroupMembers(groupId, includeAllPublicFields = false, includeTasks = false, limit = 30, lastId = '') {
   if (groupId) {
@@ -110,12 +121,17 @@ function getMemberById(memberId) {
   return undefined;
 }
 
+/**
+ * Returns array of chat objects from the current party
+ * 
+ * https://habitica.com/apidoc/#api-Chat-GetChat
+ */
 function getPartyChat() {
   return getGroupChat('party');
 }
 
 /**
- * Returns array of chat objects
+ * Returns array of chat objects from a groud
  * 
  * https://habitica.com/apidoc/#api-Chat-GetChat
  */
@@ -151,12 +167,15 @@ function sendPrivateMessage(targetUserId, messageText) {
 }
 
 /**
- * sendPM, but uses the Id of the API user as target
+ * sendPrivateMessage, but uses the Id of the API user as target
  */
 function sendPrivateMessageToSelf(messageText) {
   return sendPrivateMessage(Headers["x-api-user"], messageText);
 }
 
+/**
+ * sendMessageToGroup, but uses 'party' as groupId
+ */
 function sendMessageToParty(messageText) {
   return sendMessageToGroup('party', messageText);
 }
@@ -164,6 +183,7 @@ function sendMessageToParty(messageText) {
 /**
  * Send a message to a group (party)
  * 
+ * Returns true if the srever responded with "success", otherwise false
  * https://habitica.com/apidoc/#api-Chat-PostChat
  */
 function sendMessageToGroup(targetGroupId, messageText) {
@@ -197,7 +217,7 @@ function buyHealthPotion() {
 }
 
 /**
- * Calls toggleSleep in controlled fation
+ * Calls toggleSleep in a controlled fashion
  */
 function setSleep(user, sleepValue = true) {
   if (user) {
@@ -319,6 +339,25 @@ function runCron() {
 }
 
 /**
+ * Set Custom Day Start time
+ * 
+ * Valid dayStart values: 0-23
+ * Default dayStart: 0
+ * See: https://habitica.com/apidoc/#api-User-setCustomDayStart
+ */
+function customDayStart(dayStart = 0) {
+  const requestBody = {
+    'dayStart': dayStart
+  };
+  const result = fetchPost(`${UserAPI}/custom-day-start`, requestBody);
+  if (result !== undefined && result && result.success === true) {
+    console.log(`Day Start was successfully set to ${dayStart}`);
+    return true;
+  }
+  return false;
+}
+
+/**
  * Allocate a single Stat Point to a specific Stat
  * 
  * Possible parameter values: 
@@ -326,6 +365,7 @@ function runCron() {
  *  con = Constitution
  *  int = Intelligence
  *  per = Perception
+ * See: https://habitica.com/apidoc/#api-User-UserAllocate
  */
 function allocateStatPoint(stat) {
   if (stat) {
@@ -350,6 +390,7 @@ function allocateStatPoint(stat) {
  *  con = Constitution
  *  int = Intelligence
  *  per = Perception
+ * See: https://habitica.com/apidoc/#api-User-UserAllocateBulk
  */
 function allocateStatPoints(stat, amount) {
   if (stat && amount) {
@@ -374,7 +415,7 @@ function allocateStatPoints(stat, amount) {
 /**
  * Returns an array of tasks as data
  * 
- * Supported types: "habits", "dailys", "todos", "rewards", "completedTodos"
+ * Allowed types: "habits", "dailys", "todos", "rewards", "completedTodos" or empty
  * If the type parameter is not specified, returns all tasks
  */
 function getUserTasks(type = '', dueDate = undefined) {
@@ -394,8 +435,8 @@ function getUserTasks(type = '', dueDate = undefined) {
 
 /**
  * Score/Check a task
- * Valid direction is only "up" or "down"
  * 
+ * Valid direction is only "up" or "down"
  * Returns an object with "_tmp.drop", "buffs" and typical user stats (hp, mp, lvl etc.)
  * 
  * See: https://habitica.com/apidoc/#api-Task-ScoreTask
@@ -514,10 +555,18 @@ function deleteWebHook(webhookId) {
   return [];
 }
 
+/**
+ * "fetch" function wrapper, to do GET requests
+ */
 function fetchGet(url, anonymous = false) {
   return fetch(url, 'GET', {}, anonymous);
 }
 
+/**
+ * "fetch" function wrapper, to do POST requests
+ * requestBody: is an object that will be stringify automatically and passed the params object as "payload"
+ * contentType: The contentType of the request, default "application/json"
+ */
 function fetchPost(url, requestBody = undefined, contentType = 'application/json') {
   let params = {};
   if (requestBody !== undefined && requestBody) {
@@ -529,10 +578,23 @@ function fetchPost(url, requestBody = undefined, contentType = 'application/json
   return fetch(url, 'POST', params);
 }
 
+/**
+ * "fetch" function wrapper, to do DELETE requests
+ */
 function fetchDelete(url) {
   return fetch(url, 'DELETE');
 }
 
+/**
+ * Performs a UrlFetchApp.fetch for Habitica API with preset authorization headers.
+ * The function handles the Habitica request rate limit automatically, if habitica respons with error "TooManyRequests", 
+ * it will automatically wait for the time limit to run out and try to resend the request, up to 2 times.
+ * Parameters:
+ *  url: URL to call
+ *  method: Request method GET, POST, DELETE etc.
+ *  params: The params object, see UrlFetchApp.fetch docs
+ *  anonymous: If set to true, authorization headers will be ignored, default: false
+ */
 function fetch(url, method = 'GET', params = {}, anonymous = false) {
   if (!url) {
     console.error(`fetch error: Invalid 'url' parameter value: "${url}"`);

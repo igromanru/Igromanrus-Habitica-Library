@@ -101,23 +101,19 @@ function getTimeDifferenceToNow(dateTime) {
   return undefined;
 }
 
-function timeDifferenceToString(timeDifference) {
-  if (timeDifference && timeDifference.days !== undefined && timeDifference.hours !== undefined && timeDifference.minutes !== undefined) {
-    return `${padLeft(timeDifference.days, 2)}d${padLeft(timeDifference.hours, 2)}h${padLeft(timeDifference.minutes, 2)}m`;
-  }
-  return '';
-}
-
-function getTimeDifferenceToNowAsString(dateTime, highlightAfterXDays = 10) {
+function timeDifferenceToString(timeDifference, highlightAfterXDays = 999999) {
   let result = ``;
-  const timeDifference = getTimeDifferenceToNow(dateTime);
-  if (timeDifference) {
-    result += timeDifferenceToString(timeDifference);
+  if (timeDifference && timeDifference.days !== undefined && timeDifference.hours !== undefined && timeDifference.minutes !== undefined) {
+    result += `${padLeft(timeDifference.days, 2)}d${padLeft(timeDifference.hours, 2)}h${padLeft(timeDifference.minutes, 2)}m`;
     if (timeDifference.days >= highlightAfterXDays) {
       result = `**${result}**`;
     }
   }
   return result;
+}
+
+function getTimeDifferenceToNowAsString(dateTime, highlightAfterXDays = 999999) {
+  return timeDifferenceToString(getTimeDifferenceToNow(dateTime), highlightAfterXDays);
 }
 
 /**

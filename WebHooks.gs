@@ -43,3 +43,16 @@ function popAllWebHookContentQueueProperties() {
   }
   return webHookContents;
 }
+
+function deleteAllWebHookContentQueueProperties() {
+  let deleteCount = 0;
+  const properties = AppScriptProperties.getProperties();
+  for (const [key, value] of Object.entries(properties)) {
+    if (key.startsWith(WEBHOOK_CONTENT_QUEUE)) {
+      AppScriptProperties.deleteProperty(key);
+      deleteCount++;
+    }
+  }
+  console.log(`deleteAllWebHookContentQueueProperties: Delete count: ${deleteCount}`);
+  return deleteCount;
+}
