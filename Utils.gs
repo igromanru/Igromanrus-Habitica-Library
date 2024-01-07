@@ -101,10 +101,10 @@ function getTimeDifferenceToNow(dateTime) {
   return undefined;
 }
 
-function timeDifferenceToString(timeDifference, highlightAfterXDays = 999999) {
+function timeDifferenceToString(timeDifference, highlightAfterXDays = 999999, padString = "&nbsp;") {
   let result = ``;
   if (timeDifference && timeDifference.days !== undefined && timeDifference.hours !== undefined && timeDifference.minutes !== undefined) {
-    result += `${padLeft(timeDifference.days, 2)}d${padLeft(timeDifference.hours, 2)}h${padLeft(timeDifference.minutes, 2)}m`;
+    result += `${padLeft(timeDifference.days, 2, padString)}d${padLeft(timeDifference.hours, 2, padString)}h${padLeft(timeDifference.minutes, 2, padString)}m`;
     if (timeDifference.days >= highlightAfterXDays) {
       result = `**${result}**`;
     }
@@ -112,8 +112,8 @@ function timeDifferenceToString(timeDifference, highlightAfterXDays = 999999) {
   return result;
 }
 
-function getTimeDifferenceToNowAsString(dateTime, highlightAfterXDays = 999999) {
-  return timeDifferenceToString(getTimeDifferenceToNow(dateTime), highlightAfterXDays);
+function getTimeDifferenceToNowAsString(dateTime, highlightAfterXDays = 999999, padString = "&nbsp;") {
+  return timeDifferenceToString(getTimeDifferenceToNow(dateTime), highlightAfterXDays, padString);
 }
 
 /**
