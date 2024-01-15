@@ -1,7 +1,8 @@
 # Igromanru's Habitica Library
 
-GAS Library ID: 1zUBDNbi5fncQ3-mdKNE6SWucktAZhzvIy9Nho68xGWx317qwSx3E_L_v  
-Script URL: https://script.google.com/d/1zUBDNbi5fncQ3-mdKNE6SWucktAZhzvIy9Nho68xGWx317qwSx3E_L_v/edit?usp=sharing
+GAS Library ID: `1zUBDNbi5fncQ3-mdKNE6SWucktAZhzvIy9Nho68xGWx317qwSx3E_L_v`  
+Script URL: https://script.google.com/d/1zUBDNbi5fncQ3-mdKNE6SWucktAZhzvIy9Nho68xGWx317qwSx3E_L_v  
+Recommended Identifier: `Habitica`  
 
 ### How to add the Library to your project
 1. Under **Libraries** press the **+'' button  
