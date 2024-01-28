@@ -33,6 +33,14 @@ function isDate(dateTime) {
   return dateTime && (dateTime instanceof Date || !isNaN(Date.parse(dateTime)));
 }
 
+function subtractTimeZoneFromDate(dateTime) {
+  if (isDate(dateTime)) {
+    const timezoneOffsetAsMs = dateTime.getTimezoneOffset() * (60 * 1000);
+    return new Date(dateTime.getTime() + timezoneOffsetAsMs);
+  }
+  return undefined;
+}
+
 /**
  * Probability is percentage as a float number from 0 to 1.0
  * 

@@ -47,3 +47,9 @@ function testGetTimeDifferenceToNow() {
   console.log(JSON.stringify(getTimeDifferenceToNow(new Date())));
   console.log(JSON.stringify(getTimeDifferenceToNow("wrong param")));
 }
+
+function testSubtractTimeZoneFromDate() {
+  const dateTime = new Date();
+  console.log(dateTime);
+  console.log(subtractTimeZoneFromDate(dateTime));
+}
