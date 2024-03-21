@@ -9,7 +9,7 @@ function pushWebHookContentQueueProperty(content) {
   if (typeof content == 'string' && content) {
     const wrapper = {
       data: content,
-      timestamp: new Date().toUTCString()
+      timestamp: new Date().toISOString()
     };
     AppScriptProperties.setProperty(WEBHOOK_CONTENT_QUEUE + Utilities.getUuid(), JSON.stringify(wrapper));
   }

@@ -36,6 +36,14 @@ function setApiAuthorization(userId, apiToken) {
 }
 
 /**
+ * Removes UserId and API Token/Key from global Headers object
+ */
+function removeApiAuthorization() {
+  Headers["x-api-user"] = "";
+  Headers["x-api-key"] = "";
+}
+
+/**
  * Returns true, if properties "x-api-user" and "x-api-key" in the global Headers object have values
  */
 function isAuthorizationHeaderSet() {
